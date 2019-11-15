@@ -2,7 +2,6 @@ import testTimeAugmentation
 import function
 import os
 import shutil
-import detectStoma
 import argparse
 import ensembleOptions
 from imutils import paths
@@ -79,13 +78,13 @@ pathImg= args["dataset"]
 option = args["option"]
 
 #2. the user define the techniques and configurations fichs
-myTechniques = [ "histo","vflip"]
+myTechniques = [ "histo","vflip","gamma"]
 
-yoloDarknet = testTimeAugmentation.DarknetYoloPred('/home/master/Desktop/peso/AlvaroPrueba1_600train_65000.weights', '../peso/vocEstomas.names','../peso/yolov3Estomas.cfg')
+yoloDarknet = testTimeAugmentation.DarknetYoloPred('/home/master/Desktop/peso/yolov3.weights', '../peso/coco.names','../peso/yolov3.cfg')
 ssdResnet = testTimeAugmentation.MXnetSSD512Pred('/home/master/Desktop/peso/ssd_512_resnet50_v1_voc-9c8b225a.params', '../peso/classesMXnet.txt')
 fasterResnet = testTimeAugmentation.MXnetFasterRCNNPred('/home/master/Desktop/peso/faster_rcnn_resnet50_v1b_voc-447328d8.params', '../peso/classesMXnet.txt')
 yoloResnet = testTimeAugmentation.MXnetYoloPred('/home/master/Desktop/peso/yolo3_darknet53_voc-f5ece5ce.params', '../peso/classesMXnet.txt')
 retinaResnet50 = testTimeAugmentation.RetinaNetResnet50Pred('/home/master/Desktop/peso/resnet50_coco_best_v2.1.0.h5', '../peso/coco.csv')
 maskRcnn = testTimeAugmentation.MaskRCNNPred('/home/master/Desktop/peso/mask_rcnn_coco.h5', '../peso/coco.names')
 
-tta(maskRcnn,myTechniques,pathImg,option)
+tta(yoloDarknet,myTechniques,pathImg,option)
