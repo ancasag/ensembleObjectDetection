@@ -48,7 +48,7 @@ We provides the necessary tools to apply ensemble methods and test-time augmenta
     
 ### Model Ensemble
 As we have said before, this open source library can be expanded to work with any object detection model regardless of the algorithm and framework used to build it. As we can see in the following diagram:
-![DiagramModels](https://drive.google.com/file/d/1dQE3631F_0nuf9n8Y7IflCFJgyclHJY3/view?usp=sharing)
+![DiagramModels](diagramaClases.jpg)
 
 ## Citation
 
