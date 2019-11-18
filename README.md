@@ -10,6 +10,14 @@ You can use the methods with the following notebooks.
 
 ## Test-Time Augmentation and Model Ensemble
 We provides the necessary tools to apply ensemble methods and test-time augmentation (TTA). This open-source library canbe  extended  to  work  with  any  object  detection  model  indepen-dently of the algorithm and framework employed to construct it.
+
+### Ensemble Options
+You can be taken using three different voting strategies:
+*   Affirmative. This means that whenever one of the methods that produce the 
+initial predictions says that a region contains an object, such a detection is considered as valid.
+*   Consensus. This means that the majority of the initial methods must agree to consider that a region contains an object. The consensus strategy is analogous to the majority voting strategy commonly applied in ensemble methods for images classification.
+*   Unanimous. This means that all the methods must agree to consider that a region contains an object.
+
 ### Techniques of TTA
 - "avgBlur": (createTechnique("average_blurring", {"kernel" : 5}), createTechnique("none", {})),
 - "bilaBlur": (createTechnique("average_blurring", {"diameter" : 11, "sigmaColor": 21, "sigmaSpace":7}), createTechnique("none", {})),
@@ -50,12 +58,6 @@ We provides the necessary tools to apply ensemble methods and test-time augmenta
 As we have said before, this open source library can be expanded to work with any object detection model regardless of the algorithm and framework used to build it. As we can see in the following diagram:
 ![DiagramModels](diagramaClases.jpg)
 
-### Ensemble Options
-You can be taken using three different voting strategies:
-*   Affirmative. This means that whenever one of the methods that produce the 
-initial predictions says that a region contains an object, such a detection is considered as valid.
-*   Consensus. This means that the majority of the initial methods must agree to consider that a region contains an object. The consensus strategy is analogous to the majority voting strategy commonly applied in ensemble methods for images classification.
-*   Unanimous. This means that all the methods must agree to consider that a region contains an object.
 
 ## Citation
 
