@@ -19,45 +19,51 @@ initial predictions says that a region contains an object, such a detection is c
 *   Unanimous. This means that all the methods must agree to consider that a region contains an object.
 
 ### Techniques of TTA
-- "avgBlur": (createTechnique("average_blurring", {"kernel" : 5}), createTechnique("none", {})),
-- "bilaBlur": (createTechnique("average_blurring", {"diameter" : 11, "sigmaColor": 21, "sigmaSpace":7}), createTechnique("none", {})),
-- "blur": (createTechnique("blurring", {"ksize" : 5}), createTechnique("none", {})),
-- "chanHsv": (createTechnique("change_to_hsv",{}), createTechnique("none", {})),
-- "chanLab": (createTechnique("blurring", {"ksize" : 5}), createTechnique("none", {})),
-- "crop": (createTechnique("crop",{"percentage":0.8,"startFrom": "TOPLEFT"}), createTechnique("none", {})),
-- "dropOut": (createTechnique("dropout",{"percentage":0.05}), createTechnique("none", {})),
-- "elastic": (createTechnique("elastic",{"alpha":5,"sigma":0.05}), createTechnique("none", {})),
-- "histo": (createTechnique("equalize_histogram",{}), createTechnique("none", {})),
-- "vflip": (createTechnique("flip", {"flip": 0}), createTechnique("flip", {"flip": 0})),
-- "hflip": (createTechnique("flip", {"flip": 1}), createTechnique("flip", {"flip": 1})),
-- "hvflip": (createTechnique("flip", {"flip": -1}), createTechnique("flip", {"flip": -1})),
-- "gamma": (createTechnique("gamma",{"gamma":1.5}), createTechnique("none", {})),
-- "blurGau": (createTechnique("gaussian_blur", {"kernel" : 5}), createTechnique("none", {})),
-- "avgNoise": (createTechnique("gaussian_noise", {"mean":0, "sigma":10}), createTechnique("none", {})),
-- "invert": (createTechnique("invert",{}), createTechnique("none", {})),
-- "medianblur": (createTechnique("median_blur", {"kernel" : 5}), createTechnique("none", {})),
-- "none": (createTechnique("none", {}), createTechnique("none", {})),
-- "raiseBlue": (createTechnique("raise_blue", {"power" : 0.9}), createTechnique("none", {})),
-- "raiseGreen": (createTechnique("raise_green", {"power" : 0.9}), createTechnique("none", {})),
-- "raiseHue": (createTechnique("raise_hue", {"power" : 0.9}), createTechnique("none", {})),
-- "raiseRed": (createTechnique("raise_red", {"power" : 0.9}), createTechnique("none", {})),
-- "raiseSatu": (createTechnique("raise_saturation", {"power" : 0.9}), createTechnique("none", {})),
-- "raiseValue": (createTechnique("raise_value", {"power" : 0.9}), createTechnique("none", {})),
-- "resize": (createTechnique("resize", {"percentage" : 0.9,"method":"INTER_NEAREST"}), createTechnique("none", {})),
-- "rotation10": (createTechnique("rotate", {"angle": 10}), createTechnique("rotate", {"angle": -10})),
-- "rotation90": (createTechnique("rotate", {"angle": 90}), createTechnique("rotate", {"angle": -90})),
-- "rotation180": (createTechnique("rotate", {"angle": 180}), createTechnique("rotate", {"angle": -180})),
-- "rotation270": (createTechnique("rotate", {"angle": 270}), createTechnique("rotate", {"angle": -270})),
-- "saltPeper": (createTechnique("salt_and_pepper", {"low" : 0,"up":25}), createTechnique("none", {})),
-- "sharpen": (createTechnique("sharpen", {}), createTechnique("none", {})),
-- "shiftChannel": (createTechnique("shift_channel", {"shift":0.2}), createTechnique("none", {})),
-- "shearing": (createTechnique("shearing", {"a":0.5}), createTechnique("none", {})),
-- "translation": (createTechnique("translation", {"x":10,"y":10}), createTechnique("none", {}))
+These are all the techniques that we have defined to use in the test-time augmentation. The first column corresponds to the name assigned to the code and the second column to the name of the technique.
+- "avgBlur": average_blurring
+- "bilaBlur":bilateral_blurring 
+- "blur": blurring
+- "chanHsv":change_to_hsv
+- "chanLab":blurring
+- "crop":crop
+- "dropOut":dropout
+- "elastic": elastic
+- "histo": equalize_histogram
+- "vflip": flip
+- "hflip": flip
+- "hvflip": flip
+- "gamma": gamma
+- "blurGau": gaussian_blur
+- "avgNoise": gaussian_noise
+- "invert": invert
+- "medianblur": median_blur
+- "none": none
+- "raiseBlue": raise_blue
+- "raiseGreen": raise_green
+- "raiseHue": raise_hue
+- "raiseRed": raise_red
+- "raiseSatu": raise_saturation
+- "raiseValue": raise_value
+- "resize": resize
+- "rotation10": rotate
+- "rotation90":rotate
+- "rotation180": rotate
+- "rotation270": rotate
+- "saltPeper":salt_and_pepper
+- "sharpen": sharpen
+- "shiftChannel":shift_channel
+- "shearing":shearing
+- "translation": translation
     
 ### Model Ensemble
 As we have said before, this open source library can be expanded to work with any object detection model regardless of the algorithm and framework used to build it. As we can see in the following diagram:
 ![DiagramModels](diagramaClases.jpg)
 
+## Results obtained
+|| No TTA|TTA Colour|TTA Position|TTA All|
+|||Aff.| Cons.|Una.|Aff.| Cons.|Una.|Aff.| Cons.|Una.|
+|----------|----------|----------|----------|----------|
+|||Aff.| Cons.|Una.|Aff.| Cons.|Una.|Aff.| Cons.|Una.|
 
 ## Citation
 
