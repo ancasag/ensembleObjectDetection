@@ -60,8 +60,8 @@ As we have said before, this open source library can be expanded to work with an
 ![DiagramModels](diagramaClases.jpg)
 
 ## Results obtained
-|| No TTA|TTA Colour|TTA Position|TTA All|
-|||Aff.| Cons.|Una.|Aff.| Cons.|Una.|Aff.| Cons.|Una.|
+
+||No TTA|Aff.| Cons.|Una.|Aff.| Cons.|Una.|Aff.| Cons.|Una.|
 |--|--|--|--|--|--|--|--|--|--|
 Faster R-CNN|0.69|0.69|0.69|0.08|0.53|0.53|0.22|0.63|0.61|0.21|
 SSD mobilenet|0.62|0.63|0.63|0.09|0.58|0.58|0.52|0.61|0.58|0.47|
