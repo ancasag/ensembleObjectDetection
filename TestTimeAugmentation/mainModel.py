@@ -2,7 +2,6 @@ import testTimeAugmentation
 import function
 import os
 import shutil
-import detectStoma
 import argparse
 import ensembleOptions
 from imutils import paths
