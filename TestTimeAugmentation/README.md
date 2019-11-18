@@ -1,7 +1,6 @@
-# Test-Time Augmentation
+# Test-Time Augmentation and Ensemble models
 
-This code allows us to apply the ensemble method given a folder containing folders with the corresponding xmls and indicating 
-the option we want to use.
+This code allows us to apply the ensemble method and test-time Augmentation with the ensemble methos given a folder containing images.
 
 ### Ensemble Options
 You can be taken using three different voting strategies:
@@ -12,11 +11,14 @@ initial predictions says that a region contains an object, such a detection is c
 
 ### Executed
 To execute the code we use the following instruction.
+
+*   In case of applying Test-Time Augmentation:
 ```bash
-python main.py -d pathOfDataset -o option
+python mainTTA.py -d pathOfDataset -o option
+```
+*   In case of applying Ensemble models:
+```bash
+python mainModel.py -d pathOfDataset -o option
 ```
 ### Example
-An example of its use would be the following. Given the examples folder that in turn contains folders with the xmls files, we would execute the following instruction (suppose we choose the consensus option).
-```bash
-python main.py -d examples -o consensus
-```
+We can see an example of the use of both in the notebooks found on the home page.
