@@ -25,11 +25,11 @@ for nombre,lis in boxes:
     resul = []
 
     #we check if the output folder exists
-    equalFiles = glob.glob(datasetPath + '/*/' + nombre+'.xml')
     if os.path.exists(datasetPath+"/output") == False:
         os.mkdir(datasetPath+"/output")
+    equalFiles = glob.glob(datasetPath + '/*/' + nombre+'.xml')
     file = open(datasetPath+"/output/"+nombre+".xml", "w")
-    numFich = len(equalFiles) -1
+    numFich = len(equalFiles)
     if equalFiles[0].find("/output/")>0:
         doc = etree.parse(equalFiles[1])
     else:
