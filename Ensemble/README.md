@@ -5,4 +5,4 @@ the option we want to use.
 
 ### Executed
 
-python mainEnsemble.py -d pathOfDataset -o option
+python main.py -d pathOfDataset -o option
