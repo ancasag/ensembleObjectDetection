@@ -5,17 +5,17 @@ In this project, we show the benefits of using an ensemble algorithm that can be
 You can use the methods with the following notebooks.
 
 - [Test Time Augmentation Notebook](https://colab.research.google.com/drive/1T1mn85AedRlaTNHeJW_QeTy0I5wOy14J)
-- [Ensemble Model Notebook](https://colab.research.google.com/drive/1fHUUK65Ag6H_3CIoLt5BacA54vrWa3uY)
+- [Ensemble Model Notebook](https://colab.research.google.com/drive/1Tg9WaI_Cd-lPXDMuj6tHDlqakxo4-CLK)
 
 
 ## Test Time Augmentation
-We provides the necessary tools to appl
+We provides the necessary tools to apply ensemble methods. This open-source library canbe  extended  to  work  with  any  object  detection  model  indepen-dently of the algorithm and framework employed to construct it.
 ## Citation
 
 Use this bibtex to cite this work:
 
 ```
-@misc{CasadoGarcia18,
+@misc{CasadoGarcia19,
   title={Ensemble Methods for Object Detection},
   author={A. Casado-García and J. Heras},
   year={2019},
