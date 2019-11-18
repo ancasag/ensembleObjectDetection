@@ -61,7 +61,7 @@ As we have said before, this open source library can be expanded to work with an
 
 ## Results obtained
 
-|                |   No   |      TTA Colour     |      TTA position   |       TTA All       |
+|                |   No   |      TTA Colour   |||      TTA position |||       TTA All     |||
 
 |                |  TTA   | Aff. | Cons. | Una. | Aff. | Cons. | Una. | Aff. | Cons. | Una. |
 |----------------|--------|------|-------|------|------|-------|------|------|-------|------|
