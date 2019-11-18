@@ -1,6 +1,6 @@
 # Test-Time Augmentation and Ensemble models
 
-This code allows us to apply the ensemble method and test-time Augmentation with the ensemble methos given a folder containing images.
+This code allows us to apply the Ensemble Models and test-time Augmentation with the Ensemble Methods given a folder containing images.
 
 ### Ensemble Options
 You can be taken using three different voting strategies:
