@@ -9,7 +9,7 @@ You can use the methods with the following notebooks.
 
 
 ## Test Time Augmentation
-We provides the necessary tools to apply ensemble methods. This open-source library canbe  extended  to  work  with  any  object  detection  model  indepen-dently of the algorithm and framework employed to construct it.
+We provides the necessary tools to apply ensemble methods and test-time augmentation. This open-source library canbe  extended  to  work  with  any  object  detection  model  indepen-dently of the algorithm and framework employed to construct it.
 ## Citation
 
 Use this bibtex to cite this work:
@@ -23,4 +23,4 @@ Use this bibtex to cite this work:
 }
 ```
 ## Acknowledgments
-This work was partially supported by Ministerio de Econom\'ia y Competitividad [MTM2017-88804-P], Ministerio de Ciencia, Innovación y Universidades [RTC-2017-6640-7], Agencia de Desarrollo Econ\'omico de La Rioja [2017-I-IDD-00018], and the computing facilities of Extremadura Research Centre for Advanced Technologies (CETA-CIEMAT), funded by the European Regional Development Fund (ERDF). CETA-CIEMAT belongs to CIEMAT and the Government of Spain. We also thank Álvaro San-Sáez for providing us with the stomata datasets.
+This work was partially supported by Ministerio de Economía y Competitividad [MTM2017-88804-P], Ministerio de Ciencia, Innovación y Universidades [RTC-2017-6640-7], Agencia de Desarrollo Económico de La Rioja [2017-I-IDD-00018], and the computing facilities of Extremadura Research Centre for Advanced Technologies (CETA-CIEMAT), funded by the European Regional Development Fund (ERDF). CETA-CIEMAT belongs to CIEMAT and the Government of Spain. We also thank Álvaro San-Sáez for providing us with the stomata datasets.
