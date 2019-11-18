@@ -5,6 +5,6 @@ the option we want to use.
 
 ### Executed
 
-``bash
+```bash
 python main.py -d pathOfDataset -o option
-``
+```
