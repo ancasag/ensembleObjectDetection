@@ -20,9 +20,9 @@ def models(listaModels,pathImg,option):
 
 
     # 3. we copy the images from the initial folder to each of the created folders
-    fichs = os.listdir(pathImg)
+    #fichs = os.listdir(pathImg)
     for dire in listDirOut:
-        for fich in fichs:
+        for fich in os.listdir(pathImg):
             shutil.copy(pathImg+'/'+fich, dire+'/')
 
 
@@ -56,7 +56,7 @@ def __main__():
 
     option = args["option"]
 
-    fichs = os.listdir(pathImg)
+    #fichs = os.listdir(pathImg)
 
     imgFolder = pathImg
     #the user define configurations fichs
