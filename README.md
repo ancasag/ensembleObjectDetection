@@ -61,6 +61,8 @@ As we have said before, this open source library can be expanded to work with an
 
 ## Results obtained
 
+|                |   No   |      TTA Colour     |      TTA position   |       TTA All       |
+
 |                |  TTA   | Aff. | Cons. | Una. | Aff. | Cons. | Una. | Aff. | Cons. | Una. |
 |----------------|--------|------|-------|------|------|-------|------|------|-------|------|
 | Faster R-CNN   | 0.69   | 0.69 | 0.69  | 0.08 | 0.53 | 0.53  | 0.22 | 0.63 | 0.61  | 0.21 |
