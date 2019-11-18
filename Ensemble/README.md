@@ -18,5 +18,5 @@ python main.py -d pathOfDataset -o option
 ### Example
 An example of its use would be the following. Given the examples folder that in turn contains folders with the xmls files, we would execute the following instruction (suppose we choose the consensus option).
 ```bash
-python main.py -d examples -o consensus
+python main.py -d example -o consensus
 ```
