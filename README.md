@@ -61,6 +61,7 @@ As we have said before, this open source library can be expanded to work with an
 
 ## Results obtained
 
+Here we can see the results of a test where we see that by applying these methods we get better results.
 |                |   No   |      TTA Colour   |||      TTA position |||       TTA All     |||
 
 |                |  TTA   | Aff. | Cons. | Una. | Aff. | Cons. | Una. | Aff. | Cons. | Una. |
