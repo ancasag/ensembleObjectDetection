@@ -10,7 +10,7 @@ You can use the methods with the following notebooks.
 
 ## Test-Time Augmentation and Model Ensemble
 We provides the necessary tools to apply ensemble methods and test-time augmentation (TTA). This open-source library canbe  extended  to  work  with  any  object  detection  model  indepen-dently of the algorithm and framework employed to construct it.
-### Tecnhiques of TTA
+### Techniques of TTA
 - "avgBlur": (createTechnique("average_blurring", {"kernel" : 5}), createTechnique("none", {})),
 - "bilaBlur": (createTechnique("average_blurring", {"diameter" : 11, "sigmaColor": 21, "sigmaSpace":7}), createTechnique("none", {})),
 - "blur": (createTechnique("blurring", {"ksize" : 5}), createTechnique("none", {})),
