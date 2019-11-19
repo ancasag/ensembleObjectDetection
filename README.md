@@ -6,7 +6,7 @@ In this repository, we provide the code for ensembling the output of object dete
 
 In the following image, we show an example of the workflow of our ensemble algorithm. Three methods have been applied to detect the objects in the original image: the first method has detected the person and the horse; the second, the person and the dog; and, the third, the person, the dog, and an undefined region. The first step of our ensemble method groups the overlapping regions. Subsequently, a voting strategy is applied to discard some of those groups. The final predictions are obtained using the NMs algorithm.
 
-![TestTimeAugmentation](../images/ensemble.jpg)
+![TestTimeAugmentation](images/ensemble.jpg)
 
 ### Ensemble Options
 Three different voting strategies can be applied with our ensemble algorithm:
@@ -30,7 +30,7 @@ A simpler way to use our this method is provided in the following notebook.
 
 In the following image, we show an example of the workflow of test-time augmentation (from now on, TTA) for object detectors. First, we apply three transformations to the original image: a histogram equalisation, a horizontal flip, and a none transformation (that does not modify the image). Subsequently, we detect the objects in the new images, and apply the corresponding detection transformation to locate the objects in the correct position for the original image. Finally, the detections are ensembled using the consensus strategy.
 
-![TestTimeAugmentation](../images/testTimeAugm.jpg)
+![TestTimeAugmentation](images/testTimeAugm.jpg)
 
 ### Ensemble Options
 As indicated previously, three different voting strategies can be applied for TTA:
@@ -93,7 +93,7 @@ A simpler way to use our this method is provided in the following notebook.
 
 This open source library can be extended to work with any object detection model regardless of the algorithm and framework used to build it. To do this, it is necessary to create a new class that extends the ```IPredictor``` class of the following diagram:
 
-![DiagramModels](../images/diagramaClases.jpg)
+![DiagramModels](images/diagramaClases.jpg)
 
 Several examples of classes extending the ```IPredictor``` class can be seen in the [testTimeAugmentation.py](testTimeAugmentation.py) file. Namely, it is necessary to define a class with a ```predict``` method that takes as input the path to a folder containing the images, and stores the predictions in the Pascal VOC format in the same folder. Once this new class has been created, it can be applied both for the ensemble of models and for TTA. 
 
