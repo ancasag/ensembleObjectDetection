@@ -23,7 +23,9 @@ Installation:
 1. Clone this repository
 2. Install dependencies
 
-
+```bash
+pip3 install -r requirements.txt
+```
 
 ## Ensemble of models 
 
@@ -39,7 +41,7 @@ Three different voting strategies can be applied with our ensemble algorithm:
 
 ### Execution
 
-In order to run the ensemble algorithm, you can edit the file mainModel.py to configure the models to use and then invoke the following command where ```pathOfDataset``` is the path where the images are saved, and ```option```  is the voting strategy (affirmative, consensus or unanimous).
+In order to run the ensemble algorithm, you can edit the file mainModel.py from the TestTimeAugmentation folder to configure the models to use and then invoke the following command where ```pathOfDataset``` is the path where the images are saved, and ```option```  is the voting strategy (affirmative, consensus or unanimous).
 
 ```bash
 python mainModel.py -d pathOfDataset -o option
@@ -102,7 +104,7 @@ These are all the techniques that we have defined to use in the TTA process. The
 
 ### Execution
 
-In order to run the ensemble algorithm, you can edit the mainTTA.py file to configure the model to use and the transformation techniques. Then, you can invoke the following command where ```pathOfDataset``` is the path where the images are saved, and ```option```  is the voting strategy (affirmative, consensus or unanimous).
+In order to run the ensemble algorithm, you can edit the mainTTA.py file from the TestTimeAugmentation folder to configure the model to use and the transformation techniques. Then, you can invoke the following command where ```pathOfDataset``` is the path where the images are saved, and ```option```  is the voting strategy (affirmative, consensus or unanimous).
 
 ```bash
 python mainTTA.py -d pathOfDataset -o option
