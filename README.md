@@ -12,52 +12,7 @@ The simplest way to use this repository is through the following notebooks.
 ## Test-Time Augmentation and Model Ensemble
 We provides the necessary tools to apply ensemble methods and test-time augmentation (TTA). This open-source library can be  extended to work with any object detection  model  independently of the algorithm and framework employed to construct it.
 
-### Ensemble Options
-You can be taken using three different voting strategies:
-*   Affirmative. This means that whenever one of the methods that produce the 
-initial predictions says that a region contains an object, such a detection is considered as valid.
-*   Consensus. This means that the majority of the initial methods must agree to consider that a region contains an object. The consensus strategy is analogous to the majority voting strategy commonly applied in ensemble methods for images classification.
-*   Unanimous. This means that all the methods must agree to consider that a region contains an object.
 
-### Techniques of TTA
-These are all the techniques that we have defined to use in the test-time augmentation. The first column corresponds to the name assigned to the code and the second column to the name of the technique.
-- "avgBlur": average_blurring
-- "bilaBlur":bilateral_blurring 
-- "blur": blurring
-- "chanHsv":change_to_hsv
-- "chanLab":blurring
-- "crop":crop
-- "dropOut":dropout
-- "elastic": elastic
-- "histo": equalize_histogram
-- "vflip": flip
-- "hflip": flip
-- "hvflip": flip
-- "gamma": gamma
-- "blurGau": gaussian_blur
-- "avgNoise": gaussian_noise
-- "invert": invert
-- "medianblur": median_blur
-- "none": none
-- "raiseBlue": raise_blue
-- "raiseGreen": raise_green
-- "raiseHue": raise_hue
-- "raiseRed": raise_red
-- "raiseSatu": raise_saturation
-- "raiseValue": raise_value
-- "resize": resize
-- "rotation10": rotate
-- "rotation90":rotate
-- "rotation180": rotate
-- "rotation270": rotate
-- "saltPeper":salt_and_pepper
-- "sharpen": sharpen
-- "shiftChannel":shift_channel
-- "shearing":shearing
-- "translation": translation
-    
-### Model Ensemble
-As we have said before, 
 
 
 ## Citation
