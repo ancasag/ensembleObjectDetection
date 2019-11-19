@@ -60,23 +60,6 @@ These are all the techniques that we have defined to use in the test-time augmen
 As we have said before, this open source library can be expanded to work with any object detection model regardless of the algorithm and framework used to build it. As we can see in the following diagram:
 ![DiagramModels](diagramaClases.jpg)
 
-## Results obtained
-
-
-We have tested our methods with several datasets and algorithms.
-
-Here we can see the results of a test where we see that by applying these methods we get better results.
-|                |   No   |      TTA Colour   |||      TTA position |||       TTA All     |||
-
-|                |  TTA   | Aff. | Cons. | Una. | Aff. | Cons. | Una. | Aff. | Cons. | Una. |
-|----------------|--------|------|-------|------|------|-------|------|------|-------|------|
-| Faster R-CNN   | 0.69   | 0.69 | 0.69  | 0.08 | 0.53 | 0.53  | 0.22 | 0.63 | 0.61  | 0.21 |
-| SSD mobilenet  | 0.62   | 0.63 | 0.63  | 0.09 | 0.58 | 0.58  | 0.52 | 0.61 | 0.58  | 0.47 |
-| SSD resnet     | 0.64   | 0.70 | 0.70  | 0.08 | 0.65 | 0.65  | 0.60 | 0.68 | 0.63  | 0.09 |
-| YOLO darknet   | 0.69   | 0.71 | 0.71  | 0.09 | 0.68 | 0.68  | 0.63 | 0.70 | 0.68  | 0.57 |
-| YOLO mobilenet | 0.59   | 0.61 | 0.61  | 0.10 | 0.57 | 0.57  | 0.50 | 0.61 | 0.58  | 0.44 |
-
-
 
 ## Citation
 
