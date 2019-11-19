@@ -2,6 +2,18 @@
 
 In this repository, we provide the code for ensembling the output of object detection models, and applying test-time augmentation for object detection. This library has been designed to be applicable to any object detection model independently of the underlying algorithm and the framework employed to implement it. A draft describing the techniques implemented in this repository are available in the following [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing).
 
+1. [Ensemble of models](#ensemble-of-models)
+  * [Ensemble options](#ensemble-options)
+  * [Execution](#execution)
+2. [Test-time augmentation for object detection](#test-time-augmentation-for-object-detection)
+  * [Ensemble options](#ensemble-options)
+  * [Techniques for TTA](#techniques-for-tta)
+  * [Execution](#execution)
+3. [Adding new models](#adding-new-models)
+  * [Available models](#available-models)
+4. [Citation](#citation)
+5. [Acknowledgements](#acknowledgements)
+
 ## Ensemble of models 
 
 In the following image, we show an example of the workflow of our ensemble algorithm. Three methods have been applied to detect the objects in the original image: the first method has detected the person and the horse; the second, the person and the dog; and, the third, the person, the dog, and an undefined region. The first step of our ensemble method groups the overlapping regions. Subsequently, a voting strategy is applied to discard some of those groups. The final predictions are obtained using the NMs algorithm.
