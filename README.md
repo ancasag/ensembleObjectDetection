@@ -57,8 +57,7 @@ These are all the techniques that we have defined to use in the test-time augmen
 - "translation": translation
     
 ### Model Ensemble
-As we have said before, this open source library can be expanded to work with any object detection model regardless of the algorithm and framework used to build it. As we can see in the following diagram:
-![DiagramModels](diagramaClases.jpg)
+As we have said before, 
 
 
 ## Citation
