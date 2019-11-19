@@ -6,7 +6,7 @@ In this repository, we provide the code for ensembling the output of object dete
 
 The simplest way to use this repository is through the following notebooks.
 
-- [Ensemble Model Notebook](https://colab.research.google.com/drive/1Tg9WaI_Cd-lPXDMuj6tHDlqakxo4-CLK)
+- [Notebook for ensembling models](https://colab.research.google.com/drive/1Tg9WaI_Cd-lPXDMuj6tHDlqakxo4-CLK)
 - [Test Time Augmentation Notebook](https://colab.research.google.com/drive/1T1mn85AedRlaTNHeJW_QeTy0I5wOy14J)
 
 ## Test-Time Augmentation and Model Ensemble
