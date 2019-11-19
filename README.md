@@ -2,6 +2,7 @@
 
 In this repository, we provide the code for ensembling the output of object detection models, and applying test-time augmentation for object detection. This library has been designed to be applicable to any object detection model independently of the underlying algorithm and the framework employed to implement it. A draft describing the techniques implemented in this repository are available in the following [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing).
 
+0. [Installation](#installation-and-requirements)
 1. [Ensemble of models](#ensemble-of-models)
    * [Ensemble options](#ensemble-options)
    * [Execution](#execution)
@@ -13,6 +14,16 @@ In this repository, we provide the code for ensembling the output of object dete
    * [Available models](#available-models)
 4. [Citation](#citation)
 5. [Acknowledgements](#acknowledgements)
+
+## Installation and Requirements
+
+This library requires Python 3.6 and the packages listed in ```requirements.txt```.
+
+Installation:
+1. Clone this repository
+2. Install dependencies
+
+
 
 ## Ensemble of models 
 
