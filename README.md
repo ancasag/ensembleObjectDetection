@@ -1,5 +1,5 @@
 # Ensemble Object Detection
-In this project, we show the benefits of using an ensemble algorithm that can be applied with any object detection model independently of the underlying algorithm. In addition, our ensemble method has been employed to define a test-time augmentation procedure for object detection models.We have tested our methods with several datasets and algorithms.
+In this project, we show the benefits of using an ensemble algorithm that can be applied with any object detection model independently of the underlying algorithm. In addition, our ensemble method has been employed to define a test-time augmentation procedure for object detection models.We have tested our methods with several datasets and algorithms. A draft describing the techniques implemented in this repository are available in the following [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing).
 
 ### Colab Notebooks for prediction
 You can use the methods with the following notebooks.
@@ -72,9 +72,7 @@ Here we can see the results of a test where we see that by applying these method
 | YOLO darknet   | 0.69   | 0.71 | 0.71  | 0.09 | 0.68 | 0.68  | 0.63 | 0.70 | 0.68  | 0.57 |
 | YOLO mobilenet | 0.59   | 0.61 | 0.61  | 0.10 | 0.57 | 0.57  | 0.50 | 0.61 | 0.58  | 0.44 |
 
-## Article
 
-A first version of the article can be seen in the following link [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing).
 
 ## Citation
 
