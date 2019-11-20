@@ -58,7 +58,16 @@ def postprocess(frame, outs):
 
     # Perform non maximum suppression to eliminate redundant overlapping boxes with
     # lower confidences.
-    return boxes,confidences, classIds
+    newboxes = []
+    newconfidences = []
+    newclassIds = []
+    indices = cv.dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold)
+    for i in indices:
+        i = i[0]
+        newboxes.append(boxes[i])
+        newconfidences.append(confidences[i])
+        newclassIds.append(classIds[i])
+    return newboxes,newconfidences, newclassIds
 
 
 
