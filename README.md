@@ -67,40 +67,40 @@ As indicated previously, three different voting strategies can be applied for TT
 
 These are all the techniques that we have defined to use in the TTA process. The first column corresponds with the name assigned to the technique, and the second column describes the technique.
 
-- "avgBlur": average_blurring
-- "bilaBlur":bilateral_blurring 
-- "blur": blurring
-- "chanHsv":change_to_hsv
-- "chanLab":blurring
-- "crop":crop
-- "dropOut":dropout
-- "elastic": elastic
-- "histo": equalize_histogram
-- "vflip": flip
-- "hflip": flip
-- "hvflip": flip
-- "gamma": gamma
-- "blurGau": gaussian_blur
-- "avgNoise": gaussian_noise
-- "invert": invert
-- "medianblur": median_blur
-- "none": none
-- "raiseBlue": raise_blue
-- "raiseGreen": raise_green
-- "raiseHue": raise_hue
-- "raiseRed": raise_red
-- "raiseSatu": raise_saturation
-- "raiseValue": raise_value
-- "resize": resize
-- "rotation10": rotate
-- "rotation90":rotate
-- "rotation180": rotate
-- "rotation270": rotate
-- "saltPeper":salt_and_pepper
-- "sharpen": sharpen
-- "shiftChannel":shift_channel
-- "shearing":shearing
-- "translation": translation
+- "avgBlur": Average blurring
+- "bilaBlur": Bilateral blurring 
+- "blur": Blurring
+- "chanHsv": Change to hsv colour space
+- "chanLab": Blurring
+- "crop": Crop
+- "dropOut": Dropout
+- "elastic": Elastic deformation
+- "histo": Equalize histogram
+- "vflip": Vertical flip
+- "hflip": Horizontal flip
+- "hvflip": Vertical and horizontal flip
+- "gamma": Gamma correction
+- "blurGau": Gaussian blurring
+- "avgNoise": Add Gaussian noise
+- "invert": Invert
+- "medianblur": Median blurring
+- "none": None 
+- "raiseBlue": Raise blue channel
+- "raiseGreen": Raise green channel
+- "raiseHue": Raise hue
+- "raiseRed": Raise red
+- "raiseSatu": Raise saturation
+- "raiseValue": Raise value
+- "resize": Resize
+- "rotation10": Rotate 10º
+- "rotation90": Rotate 90º
+- "rotation180": Rotate 180º
+- "rotation270": Rotate 270º
+- "saltPeper": Add salt and pepper noise
+- "sharpen": Sharpen
+- "shiftChannel": Shift channel
+- "shearing": Shearing
+- "translation": Translation
 
 ### Execution
 
