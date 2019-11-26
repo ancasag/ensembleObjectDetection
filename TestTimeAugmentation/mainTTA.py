@@ -67,7 +67,7 @@ def tta(model,myTechniques,pathImg,option):
 
     ensembleOptions.ensembleOptions(pathImg+'/../salida/', option)
 
-def __main__():
+if __name__== "__main__":
     #Enter the path of the folder that will contain the images
     ap = argparse.ArgumentParser()
     ap.add_argument("-d", "--dataset", required=True, help="path to the dataset of images")
