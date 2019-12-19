@@ -152,17 +152,16 @@ For the experiments of Section 4.2 of the paper, we employed two stomata dataset
 - [A partially annotated dataset]().
 
 Using these datasets, we trained YOLO models using the [Darknet framework](https://pjreddie.com/darknet/yolo/):
-- [Model trained using the fully annotated dataset]().
-- [Model trained with the labelled images of the partially annotated dataset]().
-- [Model trained with the partially annotated dataset using data distillation, all the transformations, and affirmative strategy]().
-- [Model trained with the partially annotated dataset using data distillation, all the transformations, and consensus strategy]().
-- [Model trained with the partially annotated dataset using data distillation, all the transformations, and unanimous strategy]().
-- [Model trained with the partially annotated dataset using data distillation, colour transformations, and affirmative strategy]().
-- [Model trained with the partially annotated dataset using data distillation, colour transformations, and consensus strategy]().
-- [Model trained with the partially annotated dataset using data distillation, colour transformations, and unanimous strategy]().
-- [Model trained with the partially annotated dataset using data distillation, flip transformations, and affirmative strategy]().
-- [Model trained with the partially annotated dataset using data distillation, flip transformations, and consensus strategy]().
-- [Model trained with the partially annotated dataset using data distillation, flip transformations, and unanimous strategy]().
+- [Model trained using the fully annotated dataset](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EakmwB-DyndNtqjy44QPkV8BiWSRr1IdzH3HMUXqJ-CZDg?e=dbrjb3).
+- [Model trained with the partially annotated dataset using data distillation, all the transformations, and affirmative strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EXKT7thc4xRMj9_XpI_W2CQBaGH1qLxoeRijoRkoSE0POg?e=LQB0Zw).
+- [Model trained with the partially annotated dataset using data distillation, all the transformations, and consensus strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EZjK7mUFw7VKmxCw09NMtrkBFHQhQ7DVjsCYiv8cl4uCHw?e=oSjG1a).
+- [Model trained with the partially annotated dataset using data distillation, all the transformations, and unanimous strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EbOnYhJQnQNFhzjYqvO7bZgBdWRXRthJ0objTnDtHKBG6w?e=vL8WlA).
+- [Model trained with the partially annotated dataset using data distillation, colour transformations, and affirmative strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/Ea4UPMu2xgJOt3cCwmheM8MBRCNIzZGec3u12B6FHpPYXw?e=1SVTOt).
+- [Model trained with the partially annotated dataset using data distillation, colour transformations, and consensus strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EQOYgVS68QtJlBDatQsp0SMBl-MuY_efkkGAN1hti2vfSw?e=Q0mj0T).
+- [Model trained with the partially annotated dataset using data distillation, colour transformations, and unanimous strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EdQAX0hpDZdBnSt00w8kQRIB9ASjBVk3DfMq9DYOPHioOQ?e=84Q5T7).
+- [Model trained with the partially annotated dataset using data distillation, flip transformations, and affirmative strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EQrfZZBG-6tEgtaauu4DAS8BmTH-PvUYZtJbcelu6sXJwA?e=UMsIAk).
+- [Model trained with the partially annotated dataset using data distillation, flip transformations, and consensus strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EXqjV82vSLlDqEFAPhnVjBMB88gHC6vnRusG8iquHjZZ1A?e=eypIoM).
+- [Model trained with the partially annotated dataset using data distillation, flip transformations, and unanimous strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EcNU8c-5LuxHh3jx0AqGgrgBTNzLqSkU3FzLkxCPSqEO7g?e=cKEeWg).
 
 
 ### Tables
