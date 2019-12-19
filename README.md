@@ -141,9 +141,14 @@ You can see several examples of these models in the [notebook for ensembling mod
 ## Experiments
 Several experiments were conducted to test this library and the results are presented in the [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing). Here, we provide the datasets and models used for those experiments.
 ### Pascal VOC
+*   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
+*   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
 ### Stomata
+*   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
+*   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
 ### Tables
-
+*   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
+*   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
 ## Citation
 
 Use this bibtex to cite this work:
