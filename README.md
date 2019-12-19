@@ -167,7 +167,7 @@ Using these datasets, we trained two YOLO models using the [Darknet framework](h
 
 ### Tables
 For the experiments of Section 4.3 of the paper, we employed two table datasets:
-- [The ICDAR 2013 datset]().
+- [The ICDAR 2013 datset](https://www.dropbox.com/s/ky97l6zvaiv51ep/icdar2013.zip?dl=1).
 - [The Word part of the TableBank dataset](https://github.com/doc-analysis/TableBank).
 
 Using these datasets, we trained several models for the ICDAR 2013:
