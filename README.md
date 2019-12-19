@@ -148,8 +148,8 @@ For the experiments of Section 4.1 of the paper, we employed the [test set](http
 ### Stomata
 
 For the experiments of Section 4.2 of the paper, we employed two stomata datasets:
-- [A fully annotated dataset]().
-- [A partially annotated dataset]().
+- [A fully annotated dataset](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/ES3LWvFPWd1Boo5jipk3IcIBO3k6-oA5l8ufzWohHrrM_w?e=wHsZnJ).
+- [A partially annotated dataset](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/ERKdOhs1KPNOj-7qUkHhQ64BylPvotfN0Vj7PA4frz36ag?e=OCco1m).
 
 Using these datasets, we trained YOLO models using the [Darknet framework](https://pjreddie.com/darknet/yolo/):
 - [Model trained using the fully annotated dataset](https://unirioja-my.sharepoint.com/:u:/g/personal/ancasag_unirioja_es/EakmwB-DyndNtqjy44QPkV8BiWSRr1IdzH3HMUXqJ-CZDg?e=dbrjb3).
