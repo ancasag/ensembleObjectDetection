@@ -12,8 +12,12 @@ In this repository, we provide the code for ensembling the output of object dete
    * [Execution](#execution)
 3. [Adding new models](#adding-new-models)
    * [Available models](#available-models)
-4. [Citation](#citation)
-5. [Acknowledgements](#acknowledgements)
+4. [Experiments](#experiments)
+   * [Pascal VOC](#pascal-voc)
+   * [Stomata](#stomata)
+   * [Tables](#tables)
+5. [Citation](#citation)
+6. [Acknowledgements](#acknowledgements)
 
 ## Installation and Requirements
 
@@ -134,6 +138,11 @@ Currently, they library can work with models constructed with the following mode
 
 You can see several examples of these models in the [notebook for ensembling models](https://colab.research.google.com/drive/1Tg9WaI_Cd-lPXDMuj6tHDlqakxo4-CLK).
 
+## Experiments
+Several experiments were conducted to test this library and the results are presented in the [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing). Here, we provide the datasets and models used for those experiments.
+### Pascal VOC
+### Stomata
+### Tables
 
 ## Citation
 
