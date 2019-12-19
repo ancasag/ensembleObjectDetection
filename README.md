@@ -151,7 +151,7 @@ For the experiments of Section 4.2 of the paper, we employed two stomata dataset
 - [A fully annotated dataset]().
 - [A partially annotated dataset]().
 
-Using these datasets, we trained two YOLO models using the [Darknet framework](https://pjreddie.com/darknet/yolo/):
+Using these datasets, we trained YOLO models using the [Darknet framework](https://pjreddie.com/darknet/yolo/):
 - [Model trained using the fully annotated dataset]().
 - [Model trained with the labelled images of the partially annotated dataset]().
 - [Model trained with the partially annotated dataset using data distillation, all the transformations, and affirmative strategy]().
