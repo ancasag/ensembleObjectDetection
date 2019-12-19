@@ -141,13 +141,53 @@ You can see several examples of these models in the [notebook for ensembling mod
 ## Experiments
 Several experiments were conducted to test this library and the results are presented in the [article](https://drive.google.com/file/d/1ku8X8lHs6lethEa5Adhj7frzV44NTbl4/view?usp=sharing). Here, we provide the datasets and models used for those experiments.
 ### Pascal VOC
-*   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
-*   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
+
+For the experiments of Section 4.1 of the paper, we employed the [test set](https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar) of [The PASCAL Visual Object Classes Challenge](http://host.robots.ox.ac.uk/pascal/VOC/); and, the [pre-trained models](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) provided by the [MXNet library](https://gluon-cv.mxnet.io).
+
+
 ### Stomata
-*   [Datasets and models](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
+
+For the experiments of Section 4.2 of the paper, we employed two stomata datasets:
+- [A fully annotated dataset]().
+- [A partially annotated dataset]().
+
+Using these datasets, we trained two YOLO models using the [Darknet framework](https://pjreddie.com/darknet/yolo/):
+- [Model trained using the fully annotated dataset]().
+- [Model trained with the labelled images of the partially annotated dataset]().
+- [Model trained with the partially annotated dataset using data distillation, all the transformations, and affirmative strategy]().
+- [Model trained with the partially annotated dataset using data distillation, all the transformations, and consensus strategy]().
+- [Model trained with the partially annotated dataset using data distillation, all the transformations, and unanimous strategy]().
+- [Model trained with the partially annotated dataset using data distillation, colour transformations, and affirmative strategy]().
+- [Model trained with the partially annotated dataset using data distillation, colour transformations, and consensus strategy]().
+- [Model trained with the partially annotated dataset using data distillation, colour transformations, and unanimous strategy]().
+- [Model trained with the partially annotated dataset using data distillation, flip transformations, and affirmative strategy]().
+- [Model trained with the partially annotated dataset using data distillation, flip transformations, and consensus strategy]().
+- [Model trained with the partially annotated dataset using data distillation, flip transformations, and unanimous strategy]().
+
+
 ### Tables
-*   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
-*   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
+For the experiments of Section 4.3 of the paper, we employed two table datasets:
+- [The ICDAR 2013 datset]().
+- [The Word part of the TableBank dataset](https://github.com/doc-analysis/TableBank).
+
+Using these datasets, we trained several models for the ICDAR 2013:
+- [Mask RCNN model]() trained using the [Keras MaskRCNN](https://github.com/matterport/Mask_RCNN/) 
+- [SSD Model]() trained using the [MXNet framework](https://gluon-cv.mxnet.io).
+- [YOLO Model]() trained using the [Darknet framework](https://pjreddie.com/darknet/yolo/).
+
+
+And also applying model distillation:
+- [Mask RCNN model]() using affirmative strategy.
+- [Mask RCNN model]() using consensus strategy.
+- [Mask RCNN model]() using unanimous strategy.
+- [SSD model]() using affirmative strategy.
+- [SSD model]() using consensus strategy.
+- [SSD model]() using unanimous strategy.
+- [YOLO model]() using affirmative strategy.
+- [YOLO model]() using consensus strategy.
+- [YOLO model]() using unanimous strategy.
+
+
 ## Citation
 
 Use this bibtex to cite this work:
