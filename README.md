@@ -144,8 +144,7 @@ Several experiments were conducted to test this library and the results are pres
 *   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
 *   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
 ### Stomata
-*   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
-*   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
+*   [Datasets and models](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
 ### Tables
 *   [The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2012 {(VOC2012)} {R}esults](http://www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html)
 *   [MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems](https://gluon-cv.mxnet.io/model_zoo/detection.html#pascal-voc) 
