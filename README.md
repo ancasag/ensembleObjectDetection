@@ -166,25 +166,24 @@ Using these datasets, we trained YOLO models using the [Darknet framework](https
 
 ### Tables
 For the experiments of Section 4.3 of the paper, we employed two table datasets:
-- [The ICDAR 2013 datset](https://www.dropbox.com/s/ky97l6zvaiv51ep/icdar2013.zip?dl=1).
+- [The ICDAR 2013 dataset](https://www.dropbox.com/s/ky97l6zvaiv51ep/icdar2013.zip?dl=1).
 - [The Word part of the TableBank dataset](https://github.com/doc-analysis/TableBank).
 
-Using these datasets, we trained several models for the ICDAR 2013:
+Using the ICDAR 2013 dataset, we have trained several models for this dataset:
 - [Mask RCNN model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EakIU3Ex0_xAkCB2tlHwYr0B7NFsGzPzvIOyVbibMzS_wA?e=deO0eX) trained using the [Keras MaskRCNN](https://github.com/matterport/Mask_RCNN/) 
 - [SSD Model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/Ee1Spx8pFkZIoPmPBwMAVroB8gmxhKz2ZHYpaPk3Dd-2-Q?e=ZPR2QX) trained using the [MXNet framework](https://gluon-cv.mxnet.io).
 - [YOLO Model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/ESuy3N0fOkVNra63HNtPm8kBVc6qq86yPKeTsAvHdY9r6Q?e=1FuNLR) trained using the [Darknet framework](https://pjreddie.com/darknet/yolo/).
 
-
-And also applying model distillation:
-- [Mask RCNN model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EVkhZOnvWuRJuACkEfBt3tMBhVfxncchunZYvmuImOEc2A?e=gpayiE) using affirmative strategy.
-- [Mask RCNN model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EVur0-Ksy51Ikqlc7xZrPZoBtyS2iL7pCF_Fm7Nwf1bNAQ?e=OG4Tyj) using consensus strategy.
-- [Mask RCNN model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/Ea2J-_ZthxZCscBUHbShms8BWJNgiFFBSBLsnSNKv0ckZA?e=eg9W5e) using unanimous strategy.
-- [SSD model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EYqgC3Sp1jtDoDNnagKSiTsB3yRHfGr9EGUK4LYk6MEeCw?e=XSXOcV) using affirmative strategy.
-- [SSD model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EYbEwuvXWg1CgIwiOleApYYBfA8TPlWIUrGgwytfoWd5JQ?e=ilBID3) using consensus strategy.
-- [SSD model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EZRaBdzsODFNscizYwOqe3ABm4yqBLqu_GahhlIByhvMpQ?e=4t6iO3) using unanimous strategy.
-- [YOLO model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EX9jQC6iOqhBvc1qGCbr8xcBYq8WgPut2TmHqszkESNh1g?e=dmQmbC) using affirmative strategy.
-- [YOLO model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/Ebn2UwG7DvtEsmFTTTTzGMUBW2BPUeMnE5oTCIY720qyEw?e=DGHYbl) using consensus strategy.
-- [YOLO model](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EVAQYXSVAzBOnxviio5vpAEBDbICFfjgHedtvarVFanYVA?e=FF4xcI) using unanimous strategy.
+We have also trained several models for the ICDAR 2013 dataset using model distillation using the images of the  Word part of the TableBank dataset:
+- [Mask RCNN model using the affirmative strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EVkhZOnvWuRJuACkEfBt3tMBhVfxncchunZYvmuImOEc2A?e=gpayiE).
+- [Mask RCNN model using the consensus strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EVur0-Ksy51Ikqlc7xZrPZoBtyS2iL7pCF_Fm7Nwf1bNAQ?e=OG4Tyj).
+- [Mask RCNN model using the unanimous strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/Ea2J-_ZthxZCscBUHbShms8BWJNgiFFBSBLsnSNKv0ckZA?e=eg9W5e).
+- [SSD model using the affirmative strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EYqgC3Sp1jtDoDNnagKSiTsB3yRHfGr9EGUK4LYk6MEeCw?e=XSXOcV).
+- [SSD model using the consensus strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EYbEwuvXWg1CgIwiOleApYYBfA8TPlWIUrGgwytfoWd5JQ?e=ilBID3).
+- [SSD model using the unanimous strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EZRaBdzsODFNscizYwOqe3ABm4yqBLqu_GahhlIByhvMpQ?e=4t6iO3).
+- [YOLO model using the affirmative strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EX9jQC6iOqhBvc1qGCbr8xcBYq8WgPut2TmHqszkESNh1g?e=dmQmbC).
+- [YOLO model using the consensus strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/Ebn2UwG7DvtEsmFTTTTzGMUBW2BPUeMnE5oTCIY720qyEw?e=DGHYbl) .
+- [YOLO model using the unanimous strategy](https://unirioja-my.sharepoint.com/:u:/g/personal/joheras_unirioja_es/EVAQYXSVAzBOnxviio5vpAEBDbICFfjgHedtvarVFanYVA?e=FF4xcI).
 
 
 ## Citation
