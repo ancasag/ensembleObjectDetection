@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>2_0_2007_000027</filename>
+  <path>Images//../salida/vflip/tmp/2_0_2007_000027.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>486</width>
+    <height>500</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>person</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.99977356</confidence>
+    <bndbox>
+      <xmin>170</xmin>
+      <ymin>95</ymin>
+      <xmax>341</xmax>
+      <ymax>338</ymax>
+    </bndbox>
+  </object>
+</annotation>
