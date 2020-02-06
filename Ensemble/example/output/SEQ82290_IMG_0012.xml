@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ82290_IMG_001</filename>
+  <path>/SEQ82290_IMG_0012</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>coiban_agouti</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9</confidence>
+    <bndbox>
+      <xmin>1172</xmin>
+      <ymin>1070</ymin>
+      <xmax>1508</xmax>
+      <ymax>1405</ymax>
+    </bndbox>
+  </object>
+</annotation>

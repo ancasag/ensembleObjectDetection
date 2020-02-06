@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ84581_IMG_001</filename>
+  <path>/SEQ84581_IMG_0019</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>collared_peccary</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.96333333333333</confidence>
+    <bndbox>
+      <xmin>-93</xmin>
+      <ymin>337</ymin>
+      <xmax>1381</xmax>
+      <ymax>1495</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>collared_peccary</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.93666666666666</confidence>
+    <bndbox>
+      <xmin>1730</xmin>
+      <ymin>704</ymin>
+      <xmax>2025</xmax>
+      <ymax>1392</ymax>
+    </bndbox>
+  </object>
+</annotation>

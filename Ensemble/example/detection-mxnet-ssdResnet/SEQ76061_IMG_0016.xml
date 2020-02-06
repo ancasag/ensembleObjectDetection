@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ76061_IMG_001</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ76061_IMG_0016.jpg/map/ReconyxCameraTrapData/detection/SEQ76061_IMG_0016</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>red_deer</name>
+    <confidence>0.9983638</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>710</xmin>
+      <ymin>661</ymin>
+      <xmax>933</xmax>
+      <ymax>859</ymax>
+    </bndbox>
+  </object>
+</annotation>

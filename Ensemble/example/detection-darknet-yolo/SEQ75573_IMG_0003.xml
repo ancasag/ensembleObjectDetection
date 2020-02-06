@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75573_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ75573_IMG_0003</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>spiny_rat</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.5873314142227173</confidence>
+    <bndbox>
+      <xmin>835</xmin>
+      <ymin>910</ymin>
+      <xmax>984</xmax>
+      <ymax>1026</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ76076_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ76076_IMG_0001</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>white_nosed_coati</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.5731625556945801</confidence>
+    <bndbox>
+      <xmin>1526</xmin>
+      <ymin>-1</ymin>
+      <xmax>1875</xmax>
+      <ymax>545</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>common_opossum</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.883044958114624</confidence>
+    <bndbox>
+      <xmin>310</xmin>
+      <ymin>304</ymin>
+      <xmax>994</xmax>
+      <ymax>656</ymax>
+    </bndbox>
+  </object>
+</annotation>

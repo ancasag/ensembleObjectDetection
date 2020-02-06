@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ81565_IMG_000</filename>
+  <path>/SEQ81565_IMG_0007</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ocelot</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>1.0</confidence>
+    <bndbox>
+      <xmin>582</xmin>
+      <ymin>562</ymin>
+      <xmax>1408</xmax>
+      <ymax>1135</ymax>
+    </bndbox>
+  </object>
+</annotation>

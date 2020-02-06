@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ75528_IMG_001</filename>
+  <path>/SEQ75528_IMG_0013</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>red_squirrel</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.8733333333</confidence>
+    <bndbox>
+      <xmin>1328</xmin>
+      <ymin>492</ymin>
+      <xmax>1399</xmax>
+      <ymax>598</ymax>
+    </bndbox>
+  </object>
+</annotation>

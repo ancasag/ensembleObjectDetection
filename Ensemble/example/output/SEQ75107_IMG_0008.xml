@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ75107_IMG_000</filename>
+  <path>/SEQ75107_IMG_0008</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>spiny_rat</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>1.25</confidence>
+    <bndbox>
+      <xmin>240</xmin>
+      <ymin>859</ymin>
+      <xmax>534</xmax>
+      <ymax>1045</ymax>
+    </bndbox>
+  </object>
+</annotation>

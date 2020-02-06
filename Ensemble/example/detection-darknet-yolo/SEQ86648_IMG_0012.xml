@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ86648_IMG_001</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ86648_IMG_0012</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>collared_peccary</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9967811107635498</confidence>
+    <bndbox>
+      <xmin>1245</xmin>
+      <ymin>359</ymin>
+      <xmax>1727</xmax>
+      <ymax>896</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>collared_peccary</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9932992458343506</confidence>
+    <bndbox>
+      <xmin>1276</xmin>
+      <ymin>348</ymin>
+      <xmax>1690</xmax>
+      <ymax>907</ymax>
+    </bndbox>
+  </object>
+</annotation>

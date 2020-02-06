@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ84581_IMG_002</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ84581_IMG_0025</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>collared_peccary</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9987567067146301</confidence>
+    <bndbox>
+      <xmin>462</xmin>
+      <ymin>556</ymin>
+      <xmax>1819</xmax>
+      <ymax>1467</ymax>
+    </bndbox>
+  </object>
+</annotation>

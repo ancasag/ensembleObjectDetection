@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ82235_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ82235_IMG_0002.jpg/map/ReconyxCameraTrapData/detection/SEQ82235_IMG_0002</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>coiban_agouti</name>
+    <confidence>0.7698388</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1078</xmin>
+      <ymin>716</ymin>
+      <xmax>1336</xmax>
+      <ymax>903</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>red_fox</name>
+    <confidence>0.5517389</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1053</xmin>
+      <ymin>707</ymin>
+      <xmax>1343</xmax>
+      <ymax>937</ymax>
+    </bndbox>
+  </object>
+</annotation>

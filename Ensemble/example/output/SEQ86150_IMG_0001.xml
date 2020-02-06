@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ86150_IMG_000</filename>
+  <path>/SEQ86150_IMG_0001</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>collared_peccary</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.81333333333333</confidence>
+    <bndbox>
+      <xmin>1877</xmin>
+      <ymin>546</ymin>
+      <xmax>2044</xmax>
+      <ymax>912</ymax>
+    </bndbox>
+  </object>
+</annotation>

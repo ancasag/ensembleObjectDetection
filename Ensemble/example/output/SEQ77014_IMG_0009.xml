@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ77014_IMG_000</filename>
+  <path>/SEQ77014_IMG_0009</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>roe_deer</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>1.0</confidence>
+    <bndbox>
+      <xmin>1165</xmin>
+      <ymin>659</ymin>
+      <xmax>2030</xmax>
+      <ymax>1265</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75942_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ75942_IMG_0003</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>common_opossum</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.940361738204956</confidence>
+    <bndbox>
+      <xmin>753</xmin>
+      <ymin>596</ymin>
+      <xmax>1103</xmax>
+      <ymax>771</ymax>
+    </bndbox>
+  </object>
+</annotation>

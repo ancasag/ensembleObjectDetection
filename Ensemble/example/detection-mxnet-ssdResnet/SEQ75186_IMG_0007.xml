@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75186_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ75186_IMG_0007.jpg/map/ReconyxCameraTrapData/detection/SEQ75186_IMG_0007</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>mouflon</name>
+    <confidence>0.9989504</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1566</xmin>
+      <ymin>526</ymin>
+      <xmax>1827</xmax>
+      <ymax>884</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>mouflon</name>
+    <confidence>0.9325047</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>731</xmin>
+      <ymin>585</ymin>
+      <xmax>906</xmax>
+      <ymax>749</ymax>
+    </bndbox>
+  </object>
+</annotation>

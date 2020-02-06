@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ83557_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ83557_IMG_0006.jpg/map/ReconyxCameraTrapData/detection/SEQ83557_IMG_0006</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ocelot</name>
+    <confidence>0.9725935</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1347</xmin>
+      <ymin>320</ymin>
+      <xmax>2087</xmax>
+      <ymax>811</ymax>
+    </bndbox>
+  </object>
+</annotation>

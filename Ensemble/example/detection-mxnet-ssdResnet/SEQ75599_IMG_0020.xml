@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75599_IMG_002</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ75599_IMG_0020.jpg/map/ReconyxCameraTrapData/detection/SEQ75599_IMG_0020</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1920</width>
+    <height>1080</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>white_tailed_deer</name>
+    <confidence>0.819701</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>57</xmin>
+      <ymin>548</ymin>
+      <xmax>356</xmax>
+      <ymax>837</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ocelot</name>
+    <confidence>0.6691396</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>55</xmin>
+      <ymin>422</ymin>
+      <xmax>202</xmax>
+      <ymax>591</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ82290_IMG_001</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ82290_IMG_0012</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>coiban_agouti</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.7687391638755798</confidence>
+    <bndbox>
+      <xmin>1155</xmin>
+      <ymin>1110</ymin>
+      <xmax>1511</xmax>
+      <ymax>1389</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>coiban_agouti</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9580729007720947</confidence>
+    <bndbox>
+      <xmin>1177</xmin>
+      <ymin>1117</ymin>
+      <xmax>1508</xmax>
+      <ymax>1356</ymax>
+    </bndbox>
+  </object>
+</annotation>

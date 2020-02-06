@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ82023_IMG_001</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ82023_IMG_0017</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>tinamou</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9958702921867371</confidence>
+    <bndbox>
+      <xmin>1096</xmin>
+      <ymin>688</ymin>
+      <xmax>1666</xmax>
+      <ymax>1337</ymax>
+    </bndbox>
+  </object>
+</annotation>

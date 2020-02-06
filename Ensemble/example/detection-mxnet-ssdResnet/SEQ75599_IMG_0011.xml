@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75599_IMG_001</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ75599_IMG_0011.jpg/map/ReconyxCameraTrapData/detection/SEQ75599_IMG_0011</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1920</width>
+    <height>1080</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>white_tailed_deer</name>
+    <confidence>0.53979605</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>309</xmin>
+      <ymin>523</ymin>
+      <xmax>774</xmax>
+      <ymax>827</ymax>
+    </bndbox>
+  </object>
+</annotation>

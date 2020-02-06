@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75595_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ75595_IMG_0004.jpg/map/ReconyxCameraTrapData/detection/SEQ75595_IMG_0004</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1920</width>
+    <height>1080</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>white_nosed_coati</name>
+    <confidence>0.8805798</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>428</xmin>
+      <ymin>461</ymin>
+      <xmax>799</xmax>
+      <ymax>674</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75528_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ75528_IMG_0001</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>red_squirrel</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.7146172523498535</confidence>
+    <bndbox>
+      <xmin>27</xmin>
+      <ymin>545</ymin>
+      <xmax>220</xmax>
+      <ymax>658</ymax>
+    </bndbox>
+  </object>
+</annotation>

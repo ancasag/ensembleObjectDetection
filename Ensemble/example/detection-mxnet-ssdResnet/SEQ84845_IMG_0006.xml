@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ84845_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ84845_IMG_0006.jpg/map/ReconyxCameraTrapData/detection/SEQ84845_IMG_0006</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>red_brocket_deer</name>
+    <confidence>0.81649756</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1172</xmin>
+      <ymin>464</ymin>
+      <xmax>2067</xmax>
+      <ymax>1438</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ76129_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ76129_IMG_0007</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>agouti</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9997661113739014</confidence>
+    <bndbox>
+      <xmin>981</xmin>
+      <ymin>545</ymin>
+      <xmax>1464</xmax>
+      <ymax>888</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>agouti</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.7476855516433716</confidence>
+    <bndbox>
+      <xmin>1001</xmin>
+      <ymin>533</ymin>
+      <xmax>1426</xmax>
+      <ymax>893</ymax>
+    </bndbox>
+  </object>
+</annotation>

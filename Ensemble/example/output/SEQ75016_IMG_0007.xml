@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ75016_IMG_000</filename>
+  <path>/SEQ75016_IMG_0007</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>tinamou</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>1.11666</confidence>
+    <bndbox>
+      <xmin>1228</xmin>
+      <ymin>343</ymin>
+      <xmax>1420</xmax>
+      <ymax>596</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>tinamou</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.98666</confidence>
+    <bndbox>
+      <xmin>375</xmin>
+      <ymin>466</ymin>
+      <xmax>582</xmax>
+      <ymax>701</ymax>
+    </bndbox>
+  </object>
+</annotation>

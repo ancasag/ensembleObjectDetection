@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ75138_IMG_000</filename>
+  <path>/SEQ75138_IMG_0006</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>red_deer</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.989999</confidence>
+    <bndbox>
+      <xmin>892</xmin>
+      <ymin>227</ymin>
+      <xmax>1595</xmax>
+      <ymax>1031</ymax>
+    </bndbox>
+  </object>
+</annotation>

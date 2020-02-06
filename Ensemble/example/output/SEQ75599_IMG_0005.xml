@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>SEQ75599_IMG_000</filename>
+  <path>/SEQ75599_IMG_0005</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1080</width>
+    <height>1920</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>white_tailed_deer</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.853333333333333</confidence>
+    <bndbox>
+      <xmin>1045</xmin>
+      <ymin>321</ymin>
+      <xmax>1698</xmax>
+      <ymax>771</ymax>
+    </bndbox>
+  </object>
+</annotation>

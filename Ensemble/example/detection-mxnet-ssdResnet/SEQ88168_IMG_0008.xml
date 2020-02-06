@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ88168_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ88168_IMG_0008.jpg/map/ReconyxCameraTrapData/detection/SEQ88168_IMG_0008</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>paca</name>
+    <confidence>0.984735</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>970</xmin>
+      <ymin>729</ymin>
+      <xmax>1359</xmax>
+      <ymax>1027</ymax>
+    </bndbox>
+  </object>
+</annotation>

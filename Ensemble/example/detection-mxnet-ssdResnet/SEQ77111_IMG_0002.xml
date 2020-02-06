@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ77111_IMG_000</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ77111_IMG_0002.jpg/map/ReconyxCameraTrapData/detection/SEQ77111_IMG_0002</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>roe_deer</name>
+    <confidence>0.54595727</confidence>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>423</xmin>
+      <ymin>662</ymin>
+      <xmax>633</xmax>
+      <ymax>858</ymax>
+    </bndbox>
+  </object>
+</annotation>

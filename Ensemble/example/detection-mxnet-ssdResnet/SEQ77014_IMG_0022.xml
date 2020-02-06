@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ77014_IMG_002</filename>
+  <path>map/ReconyxCameraTrapData/detection/SEQ77014_IMG_0022.jpg/map/ReconyxCameraTrapData/detection/SEQ77014_IMG_0022</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>

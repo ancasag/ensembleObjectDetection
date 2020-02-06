@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75195_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ75195_IMG_0002</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>red_fox</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.8976443409919739</confidence>
+    <bndbox>
+      <xmin>224</xmin>
+      <ymin>883</ymin>
+      <xmax>645</xmax>
+      <ymax>1107</ymax>
+    </bndbox>
+  </object>
+</annotation>

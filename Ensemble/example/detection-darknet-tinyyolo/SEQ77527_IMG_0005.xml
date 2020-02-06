@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ77527_IMG_000</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ77527_IMG_0005</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>wood_mouse</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.946328341960907</confidence>
+    <bndbox>
+      <xmin>659</xmin>
+      <ymin>924</ymin>
+      <xmax>895</xmax>
+      <ymax>1140</ymax>
+    </bndbox>
+  </object>
+</annotation>

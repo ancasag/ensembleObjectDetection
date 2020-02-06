@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>map/ReconyxCameraTrapData/detection/SEQ75710_IMG_001</filename>
+  <path>/map/ReconyxCameraTrapData/detection/SEQ75710_IMG_0015</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1536</width>
+    <height>2048</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>wild_boar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9412142038345337</confidence>
+    <bndbox>
+      <xmin>1528</xmin>
+      <ymin>638</ymin>
+      <xmax>2056</xmax>
+      <ymax>1089</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>wild_boar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9785521626472473</confidence>
+    <bndbox>
+      <xmin>4</xmin>
+      <ymin>692</ymin>
+      <xmax>453</xmax>
+      <ymax>1505</ymax>
+    </bndbox>
+  </object>
+</annotation>
