@@ -25,6 +25,12 @@ This library requires Python 3.6 and the packages listed in ```requirements.txt`
 
 Installation:
 1. Clone this repository
+
+```bash
+git clone --recurse-submodules https://github.com/ancasag/ensembleObjectDetection
+```
+
+
 2. Install dependencies
 
 ```bash
