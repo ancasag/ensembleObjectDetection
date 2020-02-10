@@ -72,3 +72,30 @@ class MaskRCNNPred(IPredictor):
 
     def predict(self, imgPath, output):
         predict_batch_rcnn.mainDataset(imgPath, output, self.pathPesos, self.classes)
+ 
+class Efficient(IPredictor):
+
+    def __init__(self, weightPath, classes):
+        IPredictor.__init__(self, weightPath)
+        self.classes = classes
+
+    def predict(self, imgPath, output):
+        predict_batch_efficient.mainDataset(imgPath, output, self.pathPesos, self.classes)
+
+class FSAF(IPredictor):
+
+    def __init__(self, weightPath, classes):
+        IPredictor.__init__(self, weightPath)
+        self.classes = classes
+
+    def predict(self, imgPath, output):
+        predict_batch_FSAF.mainDataset(imgPath, output, self.pathPesos, self.classes)
+
+class FCOS(IPredictor):
+
+    def __init__(self, weightPath, classes):
+        IPredictor.__init__(self, weightPath)
+        self.classes = classes
+
+    def predict(self, imgPath, output):
+        predict_batch_FCOS.mainDataset(imgPath, output, self.pathPesos, self.classes)
