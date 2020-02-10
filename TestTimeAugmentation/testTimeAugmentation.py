@@ -5,6 +5,9 @@ import os
 import predict_batch
 import predict_batch_rcnn
 import predict_batch_retinanet
+import predict_batch_efficient
+import predict_batch_FSAF
+import predict_batch_FCOS
 
 
 #abstract class
