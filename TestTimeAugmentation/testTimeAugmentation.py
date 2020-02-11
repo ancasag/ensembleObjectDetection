@@ -1,13 +1,10 @@
 import abc
 from abc import ABC
-import detect
 import os
-import predict_batch
-import predict_batch_rcnn
-import predict_batch_retinanet
-import predict_batch_efficient
-import predict_batch_FSAF
-import predict_batch_FCOS
+
+
+
+
 
 
 #abstract class
@@ -22,7 +19,7 @@ class IPredictor(ABC):
 
 #heritage
 class DarknetYoloPred(IPredictor):
-    
+    import detect
     def __init__(self,weightPath,fichNames, fichCfg):
         IPredictor.__init__(self, weightPath)
         self.fichNames = fichNames
@@ -32,7 +29,7 @@ class DarknetYoloPred(IPredictor):
         detect.mainDataset(imgPath, output, self.pathPesos, self.fichNames, self.fichCfg)
 
 class MXnetYoloPred(IPredictor):
-
+    import predict_batch
     def __init__(self,weightPath,classes):
         IPredictor.__init__(self, weightPath)
         self.classes=classes
@@ -41,7 +38,7 @@ class MXnetYoloPred(IPredictor):
         predict_batch.mainDataset(imgPath, output,'yolo3_darknet53_custom', self.pathPesos, self.classes)
 
 class MXnetSSD512Pred(IPredictor):
-
+    import predict_batch
     def __init__(self,weightPath,classes):
         IPredictor.__init__(self, weightPath)
         self.classes=classes
@@ -50,7 +47,7 @@ class MXnetSSD512Pred(IPredictor):
         predict_batch.mainDataset(imgPath, output,'ssd_512_resnet50_v1_custom',self.pathPesos, self.classes)
 
 class MXnetFasterRCNNPred(IPredictor):
-    
+    import predict_batch
     def __init__(self,weightPath,classes):
         IPredictor.__init__(self, weightPath)
         self.classes=classes
@@ -59,7 +56,7 @@ class MXnetFasterRCNNPred(IPredictor):
         predict_batch.mainDataset(imgPath, output,'faster_rcnn_resnet50_v1b_custom', self.pathPesos, self.classes)
 
 class RetinaNetResnet50Pred(IPredictor):
-    
+    import predict_batch_retinanet
     def __init__(self,weightPath,classes):
         IPredictor.__init__(self, weightPath)
         self.classes=classes
@@ -68,7 +65,7 @@ class RetinaNetResnet50Pred(IPredictor):
         predict_batch_retinanet.mainDataset(imgPath, output,'resnet50_v1', self.pathPesos, self.classes)
 
 class MaskRCNNPred(IPredictor):
-    
+    import predict_batch_rcnn
     def __init__(self,weightPath,classes):
         IPredictor.__init__(self, weightPath)
         self.classes=classes
@@ -77,7 +74,7 @@ class MaskRCNNPred(IPredictor):
         predict_batch_rcnn.mainDataset(imgPath, output, self.pathPesos, self.classes)
  
 class Efficient(IPredictor):
-
+    import predict_batch_efficient
     def __init__(self, weightPath, classes):
         IPredictor.__init__(self, weightPath)
         self.classes = classes
@@ -86,7 +83,7 @@ class Efficient(IPredictor):
         predict_batch_efficient.mainDataset(imgPath, output, self.pathPesos, self.classes)
 
 class FSAF(IPredictor):
-
+    import predict_batch_FSAF
     def __init__(self, weightPath, classes):
         IPredictor.__init__(self, weightPath)
         self.classes = classes
@@ -95,7 +92,7 @@ class FSAF(IPredictor):
         predict_batch_FSAF.mainDataset(imgPath, output, self.pathPesos, self.classes)
 
 class FCOS(IPredictor):
-
+    import predict_batch_FCOS
     def __init__(self, weightPath, classes):
         IPredictor.__init__(self, weightPath)
         self.classes = classes
