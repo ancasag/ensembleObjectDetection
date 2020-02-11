@@ -2,11 +2,6 @@ import abc
 from abc import ABC
 import os
 
-
-
-
-
-
 #abstract class
 class IPredictor(ABC):
     #constructor
