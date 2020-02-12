@@ -27,7 +27,7 @@ Installation:
 1. Clone this repository
 
 ```bash
-git clone --recurse-submodules https://github.com/ancasag/ensembleObjectDetection
+git clone https://github.com/ancasag/ensembleObjectDetection
 ```
 
 
