@@ -60,7 +60,7 @@ class RetinaNetResnet50Pred(IPredictor):
         self.classes=classes
 
     def predict(self, imgPath, output):
-        import predict_batch
+        import predict_batch_retinanet
         predict_batch_retinanet.mainDataset(imgPath, output,'resnet50_v1', self.pathPesos, self.classes)
 
 class MaskRCNNPred(IPredictor):
