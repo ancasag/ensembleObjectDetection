@@ -1,9 +1,0 @@
-[submodule "TestTimeAugmentation/FSAF"]
-	path = TestTimeAugmentation/FSAF
-	url = https://github.com/joheras/FSAF
-[submodule "TestTimeAugmentation/keras-fcos"]
-	path = TestTimeAugmentation/keras-fcos
-	url = https://github.com/joheras/keras-fcos
-[submodule "TestTimeAugmentation/EfficientDet"]
-	path = TestTimeAugmentation/EfficientDet
-	url = https://github.com/joheras/EfficientDet
