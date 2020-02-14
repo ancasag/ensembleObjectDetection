@@ -1,13 +1,30 @@
-import testTimeAugmentation
-import function
+import ensemble.testTimeAugmentation
+import ensemble.function
 import os
 import shutil
+import sys
 import argparse
-import ensembleOptions
+import ensemble.ensembleOptionsTTA
 from imutils import paths
+from PyQt5 import QtCore, QtGui, QtWidgets
+try:
+    from PyQt5.QtGui import *
+    from PyQt5.QtCore import *
+    from PyQt5.QtWidgets import *
+    from PyQt5 import QtGui, QtCore
+except ImportError:
+    # needed for py3+qt4
+    # Ref:
+    # http://pyqt.sourceforge.net/Docs/PyQt4/incompatible_apis.html
+    # http://stackoverflow.com/questions/21217399/pyqt4-qtcore-qvariant-object-instead-of-a-string
+    if sys.version_info.major >= 3:
+        import sip
 
+        sip.setapi('QVariant', 2)
+    from PyQt4.QtGui import *
+    from PyQt4.QtCore import *
 
-def tta(model,myTechniques,pathImg,option):
+def tta(model,myTechniques,pathImg,option, conf):
     fichs = os.listdir(pathImg)
     # 1. Create tmp folder
     os.mkdir(pathImg+'/tmp')
@@ -19,7 +36,7 @@ def tta(model,myTechniques,pathImg,option):
     os.mkdir(pathImg+'/../salida')
     # 3. Classification
     for technique in myTechniques:
-        function.clasification(imgFolder,technique)
+        ensemble.function.clasification(imgFolder,technique)
     # we get all the folders we have created
     listDirOut = []
     for filename in os.listdir(pathImg+'/../salida'):
@@ -35,20 +52,16 @@ def tta(model,myTechniques,pathImg,option):
         os.rmdir(dir+'/tmp')
 
     # 4. Generate xml
+
     for dir in listDirOut:
-        
-        #yoloDarknet.predict(dir, dir)
-        #ssdResnet.predict(dir, dir)
-        #fasterResnet.predict(dir, dir)
-        #yoloResnet.predict(dir, dir)
-        model.predict(dir, dir)
-        #maskRcnn.predict(dir,dir)
+        model.predict(dir, dir,conf)
+
 
 
     # 5. Detection
     for dir in listDirOut:
         tec = dir.split("/")
-        function.detection(dir, tec[len(tec)-1])
+        ensemble.function.detection(dir, tec[len(tec)-1])
 
     for dir in listDirOut:
         for img in os.listdir(dir):
@@ -65,26 +78,8 @@ def tta(model,myTechniques,pathImg,option):
         for file in list(paths.list_files(pathImg+'/../salida/'+dirOut, validExts=(".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif"))):
             os.remove(file)
 
-    ensembleOptions.ensembleOptions(pathImg+'/../salida/', option)
-
-if __name__== "__main__":
-    #Enter the path of the folder that will contain the images
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-d", "--dataset", required=True, help="path to the dataset of images")
-    ap.add_argument("-o", "--option",  default='consensus', help="option to the ensemble: affirmative, consensus or unanimous")
-
-    args = vars(ap.parse_args())
-    pathImg= args["dataset"]
-    option = args["option"]
-
-    #2. the user define the techniques and configurations fichs
-    myTechniques = [ "histo","vflip","gamma"]
-
-    yoloDarknet = testTimeAugmentation.DarknetYoloPred('/home/master/Desktop/peso/yolov3.weights', '../peso/coco.names','../peso/yolov3.cfg')
-    ssdResnet = testTimeAugmentation.MXnetSSD512Pred('/home/master/Desktop/peso/ssd_512_resnet50_v1_voc-9c8b225a.params', '../peso/classesMXnet.txt')
-    fasterResnet = testTimeAugmentation.MXnetFasterRCNNPred('/home/master/Desktop/peso/faster_rcnn_resnet50_v1b_voc-447328d8.params', '../peso/classesMXnet.txt')
-    yoloResnet = testTimeAugmentation.MXnetYoloPred('/home/master/Desktop/peso/yolo3_darknet53_voc-f5ece5ce.params', '../peso/classesMXnet.txt')
-    retinaResnet50 = testTimeAugmentation.RetinaNetResnet50Pred('/home/master/Desktop/peso/resnet50_coco_best_v2.1.0.h5', '../peso/coco.csv')
-    maskRcnn = testTimeAugmentation.MaskRCNNPred('/home/master/Desktop/peso/mask_rcnn_coco.h5', '../peso/coco.names')
-
-    tta(yoloDarknet,myTechniques,pathImg,option)
+    ensemble.ensembleOptionsTTA.ensembleOptions(pathImg+'/../salida/', option)
+    for xml in os.listdir(pathImg+'/../salida/output/'):
+        shutil.copy(pathImg+'/../salida/output/'+xml,pathImg+'/')
+    shutil.rmtree(pathImg+'/tmp')
+    shutil.rmtree(pathImg+'/../salida/')
