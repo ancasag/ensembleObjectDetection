@@ -28,7 +28,7 @@ def getOutputsNames(net):
 
 
 # Remove the bounding boxes with low confidence using non-maxima suppression
-def postprocess(frame, outs):
+def postprocess(frame, outs, conf):
     frameHeight = frame.shape[0]
     frameWidth = frame.shape[1]
 
@@ -61,7 +61,7 @@ def postprocess(frame, outs):
     newboxes = []
     newconfidences = []
     newclassIds = []
-    indices = cv.dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold)
+    indices = cv.dnn.NMSBoxes(boxes, confidences, conf, nmsThreshold)
     for i in indices:
         i = i[0]
         newboxes.append(boxes[i])
@@ -135,7 +135,7 @@ def generateXML(filename,outputPath,w,h,d,boxes,confidences, classIds,classes):
 def mainImage(imagePath):
     generateXMLFromImage(imagePath)
 
-def mainDataset(imagesPath, outputDataset, pathPesos, fichNames, fichCfg):
+def mainDataset(imagesPath, outputDataset, conf, pathPesos, fichNames, fichCfg):
     # Give the configuration and weight files for the model and
     # load the network using them.
     if os.path.exists(outputDataset) == False:
@@ -160,10 +160,10 @@ def mainDataset(imagesPath, outputDataset, pathPesos, fichNames, fichCfg):
     #nomPeso = os.path.basename( pathPesos)#peso)
     #nombre = os.path.splitext(nomPeso)[0]
     for image in images:
-        generateXMLFromImage(image, outputDataset, net,classes)#+'/'+nombre, net)
+        generateXMLFromImage(image, outputDataset, net,classes, conf)#+'/'+nombre, net)
 
 
-def generateXMLFromImage(imagePath, output, net, classes):
+def generateXMLFromImage(imagePath, output, net, classes, conf):
     im = cv.VideoCapture(imagePath)
     hasFrame, frame = im.read()
     blob = cv.dnn.blobFromImage(frame, 1 / 255, (inpWidth, inpHeight), [0, 0, 0], 1, crop=False)
@@ -176,7 +176,7 @@ def generateXMLFromImage(imagePath, output, net, classes):
     outs = net.forward(getOutputsNames(net))
 
     # Remove the bounding boxes with low confidence
-    boxes,confidences, classIds = postprocess(frame, outs)
+    boxes,confidences, classIds = postprocess(frame, outs, conf)
     wI, hI, d = frame.shape
     filename = os.path.basename(imagePath)
     file = open(output+'/'+os.path.splitext(filename)[0] + ".xml", "w")
