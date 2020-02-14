@@ -17,7 +17,7 @@ import cv2
 import os
 from mrcnn import utils
 
-confidence=0.25
+#confidence=0.25
 
 # TODO:
 # Allow option for --input to be a .txt file OR a directory. Check if
@@ -104,7 +104,7 @@ def generateXML(filename,outputPath,w,h,d,boxes):
 
 # loop over the input image paths
 
-def mainDataset(dataset,output,weights,fichClass):
+def mainDataset(dataset,output, confidence,weights,fichClass):
     LABELS = open(fichClass).read().strip().split("\n")
     classes =[L.split(",")[0] for L in LABELS]
     conf= TestConfig()
