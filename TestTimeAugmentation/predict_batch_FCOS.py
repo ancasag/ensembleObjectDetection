@@ -25,7 +25,7 @@ def get_session():
     config.gpu_options.allow_growth = True
     return tf.Session(config=config)
 
-confidence=0.5
+#confidence=0.5
 
 def prettify(elem):
     """Return a pretty-printed XML string for the Element.
@@ -81,7 +81,7 @@ def generateXML(filename,outputPath,w,h,d,boxes,classes):
         childYmax.text = str(ymax)
     return prettify(top)
 
-def mainDataset(dataset,output,weights,fichClass):
+def mainDataset(dataset,output, confidence, weights, fichClass):
     f = open(fichClass)
     LABELS = f.read().strip().split("\n")
     LABELS = [label.split(',')[0] for label in LABELS]
@@ -105,7 +105,7 @@ def mainDataset(dataset,output,weights,fichClass):
       w, h, d = image.shape
       boxes1 = []
       for (box, score, label) in zip(boxes[0], scores[0], labels[0]):
-        if score < 0.5:
+        if score < confidence:
           continue
         boxes1.append(([label,box],score))
       file = open(image_path[0:image_path.rfind(".")]+".xml", "w")
