@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from imutils import paths
 
-confidence=0.5
+#confidence=0.5
 def prettify(elem):
     """Return a pretty-printed XML string for the Element.
     """
@@ -62,7 +62,7 @@ def generateXML(filename,outputPath,w,h,d,boxes,scores,labels,classes):
     return prettify(top)
 
 
-def mainDataset(dataset, output, weights, fichClass, phi=0):
+def mainDataset(dataset, output, confidence,weights, fichClass, phi=0):
     f = open(fichClass)
     LABELS = f.read().strip().split("\n")
     LABELS = {int(L.split(",")[1]): L.split(",")[0] for L in LABELS}
