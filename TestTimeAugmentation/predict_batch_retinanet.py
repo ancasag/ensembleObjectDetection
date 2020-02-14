@@ -15,7 +15,7 @@ import argparse
 import cv2
 import os
 
-confidence = 0.25
+#confidence = 0.25
 
 def prettify(elem):
     """Return a pretty-printed XML string for the Element.
@@ -75,7 +75,7 @@ def generateXML(filename,outputPath,w,h,d,boxes):
 # TODO:
 # Allow option for --input to be a .txt file OR a directory. Check if
 # file, and if so, presume keras-retinanet set of images + labels
-def mainDataset(dataset,output,name,weights,fichClass):
+def mainDataset(dataset,output,name,confidence,weights,fichClass):
     # load the class label mappings
     LABELS = open(fichClass).read().strip().split("\n")
     LABELS = {int(L.split(",")[1]): L.split(",")[0] for L in LABELS}
