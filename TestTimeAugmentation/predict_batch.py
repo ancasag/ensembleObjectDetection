@@ -17,9 +17,9 @@ import os
 # TODO:
 # Allow option for --input to be a .txt file OR a directory. Check if
 # file, and if so, presume keras-retinanet set of images + labels
-confidence=0.25
+#confidence=0.25
 
-def mainDataset(dataset,output,name,weights,fichClass):
+def mainDataset(dataset,output,confidence,name,weights,fichClass):
     classes=[]
     f = open(fichClass)
     for linea in f:
