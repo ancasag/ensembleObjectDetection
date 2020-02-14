@@ -12,7 +12,7 @@ import glob
 import testTimeAugmentation as test
 import generateXML
 
-confThreshold = 0.4  #Confidence threshold
+#confThreshold = 0.4  #Confidence threshold
 nmsThreshold = 0.4   #Non-maximum suppression threshold
 inpWidth = 416       #Width of network's input image
 inpHeight = 416      #Height of network's input image
