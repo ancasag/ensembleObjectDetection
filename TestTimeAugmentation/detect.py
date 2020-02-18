@@ -28,7 +28,7 @@ def getOutputsNames(net):
 
 
 # Remove the bounding boxes with low confidence using non-maxima suppression
-def postprocess(frame, outs, conf):
+def postprocess(frame, outs, confThreshold):
     frameHeight = frame.shape[0]
     frameWidth = frame.shape[1]
 
