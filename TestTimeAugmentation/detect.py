@@ -28,7 +28,7 @@ def getOutputsNames(net):
 
 
 # Remove the bounding boxes with low confidence using non-maxima suppression
-def postprocess(frame, outs, confThreshold):
+def postprocess(frame, outs, conf):
     frameHeight = frame.shape[0]
     frameWidth = frame.shape[1]
 
@@ -45,7 +45,7 @@ def postprocess(frame, outs, confThreshold):
             scores = detection[5:]
             classId = np.argmax(scores)
             confidence = scores[classId]
-            if confidence > confThreshold:
+            if confidence > conf:
                 center_x = int(detection[0] * frameWidth)
                 center_y = int(detection[1] * frameHeight)
                 width = int(detection[2] * frameWidth)
