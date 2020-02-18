@@ -20,8 +20,8 @@ class DarknetYoloPred(IPredictor):
         self.fichCfg = fichCfg
 
     def predict(self, imgPath, output, conf):
-        import predict.detect
-        predict.detect.mainDataset(imgPath, output, conf, self.pathPesos, self.fichNames, self.fichCfg)
+        import detect
+        detect.mainDataset(imgPath, output, conf, self.pathPesos, self.fichNames, self.fichCfg)
 
 
 class MXnetYoloPred(IPredictor):
@@ -31,8 +31,8 @@ class MXnetYoloPred(IPredictor):
         self.classes=classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch
-        predict.predict_batch.mainDataset(imgPath, output, conf,'yolo3_darknet53_custom', self.pathPesos, self.classes)
+        import predict_batch
+        predict_batch.mainDataset(imgPath, output, conf,'yolo3_darknet53_custom', self.pathPesos, self.classes)
 
 class MXnetSSD512Pred(IPredictor):
 
@@ -41,8 +41,8 @@ class MXnetSSD512Pred(IPredictor):
         self.classes=classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch
-        predict.predict_batch.mainDataset(imgPath, output, conf,'ssd_512_resnet50_v1_custom',self.pathPesos, self.classes)
+        import predict_batch
+        predict_batch.mainDataset(imgPath, output, conf,'ssd_512_resnet50_v1_custom',self.pathPesos, self.classes)
 
 class MXnetFasterRCNNPred(IPredictor):
     
@@ -51,8 +51,8 @@ class MXnetFasterRCNNPred(IPredictor):
         self.classes=classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch
-        predict.predict_batch.mainDataset(imgPath, output, conf,'faster_rcnn_resnet50_v1b_custom', self.pathPesos, self.classes)
+        import predict_batch
+        predict_batch.mainDataset(imgPath, output, conf,'faster_rcnn_resnet50_v1b_custom', self.pathPesos, self.classes)
 
 class RetinaNetResnet50Pred(IPredictor):
     
@@ -61,8 +61,8 @@ class RetinaNetResnet50Pred(IPredictor):
         self.classes=classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch_retinanet
-        predict.predict_batch_retinanet.mainDataset(imgPath, output, conf,'resnet50_v1', self.pathPesos, self.classes)
+        import predict_batch_retinanet
+        predict_batch_retinanet.mainDataset(imgPath, output, conf,'resnet50_v1', self.pathPesos, self.classes)
 
 class MaskRCNNPred(IPredictor):
     
@@ -71,8 +71,8 @@ class MaskRCNNPred(IPredictor):
         self.classes=classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch_rcnn
-        predict.predict_batch_rcnn.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
+        import predict_batch_rcnn
+        predict_batch_rcnn.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
 
 
 class Efficient(IPredictor):
@@ -82,8 +82,8 @@ class Efficient(IPredictor):
         self.classes = classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch_efficient
-        predict.predict_batch_efficient.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
+        import predict_batch_efficient
+        predict_batch_efficient.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
 
 class FSAF(IPredictor):
 
@@ -92,8 +92,8 @@ class FSAF(IPredictor):
         self.classes = classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch_FSAF
-        predict.predict_batch_FSAF.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
+        import predict_batch_FSAF
+        predict_batch_FSAF.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
 
 class FCOS(IPredictor):
 
@@ -102,5 +102,5 @@ class FCOS(IPredictor):
         self.classes = classes
 
     def predict(self, imgPath, output, conf):
-        import predict.predict_batch_FCOS
-        predict.predict_batch_FCOS.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
+        import predict_batch_FCOS
+        predict_batch_FCOS.mainDataset(imgPath, output, conf, self.pathPesos, self.classes)
