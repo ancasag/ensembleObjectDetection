@@ -1,10 +1,10 @@
-import ensemble.testTimeAugmentation
-import ensemble.function
+import testTimeAugmentation
+import function
 import os
 import shutil
 import sys
 import argparse
-import ensemble.ensembleOptionsTTA
+import ensembleOptions
 from imutils import paths
 from PyQt5 import QtCore, QtGui, QtWidgets
 try:
@@ -36,7 +36,7 @@ def tta(model,myTechniques,pathImg,option, conf):
     os.mkdir(pathImg+'/../salida')
     # 3. Classification
     for technique in myTechniques:
-        ensemble.function.clasification(imgFolder,technique)
+        function.clasification(imgFolder,technique)
     # we get all the folders we have created
     listDirOut = []
     for filename in os.listdir(pathImg+'/../salida'):
@@ -61,7 +61,7 @@ def tta(model,myTechniques,pathImg,option, conf):
     # 5. Detection
     for dir in listDirOut:
         tec = dir.split("/")
-        ensemble.function.detection(dir, tec[len(tec)-1])
+        function.detection(dir, tec[len(tec)-1])
 
     for dir in listDirOut:
         for img in os.listdir(dir):
@@ -78,7 +78,7 @@ def tta(model,myTechniques,pathImg,option, conf):
         for file in list(paths.list_files(pathImg+'/../salida/'+dirOut, validExts=(".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif"))):
             os.remove(file)
 
-    ensemble.ensembleOptionsTTA.ensembleOptions(pathImg+'/../salida/', option)
+    ensembleOptions.ensembleOptions(pathImg+'/../salida/', option)
     for xml in os.listdir(pathImg+'/../salida/output/'):
         shutil.copy(pathImg+'/../salida/output/'+xml,pathImg+'/')
     shutil.rmtree(pathImg+'/tmp')
