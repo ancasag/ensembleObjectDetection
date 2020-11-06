@@ -6,7 +6,7 @@ import argparse
 import ensembleOptions
 from imutils import paths
 
-def models(listaModels,pathImg,option):
+def models(listaModels,pathImg,option,confidence):
     # 1. First we create the folder where we will store the resulting images and create as many folders as we have models
     os.mkdir(pathImg+'/../salida')
     for model in listaModels:
@@ -32,7 +32,7 @@ def models(listaModels,pathImg,option):
             if (os.path.splitext(os.path.basename(pathImg+'/../salida/'+model.pathPesos))[0]) == dir:
                 #Then we list the files in that folder
                 images = os.listdir(pathImg+'/../salida/'+dir)
-                model.predict(pathImg+'/../salida/'+dir, pathImg+'/../salida/'+dir)
+                model.predict(pathImg+'/../salida/'+dir, pathImg+'/../salida/'+dir,confidence)
 
 
 
