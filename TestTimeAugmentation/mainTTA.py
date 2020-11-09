@@ -7,7 +7,7 @@ import argparse
 import ensembleOptions
 from imutils import paths
 
-def tta(model,myTechniques,pathImg,option, conf=0.7):
+def tta(model,myTechniques,pathImg,option, conf):
     fichs = os.listdir(pathImg)
     # 1. Create tmp folder
     os.mkdir(pathImg+'/tmp')
