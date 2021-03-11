@@ -91,7 +91,7 @@ def mainDataset(dataset,output, confidence, name, weights,fichClass):
     
     	# load the input image (in BGR order), clone it, and preprocess it
     	image = read_image_bgr(imagePath)
-    	wI, hI, d = image.shape
+    	hI, wI, d = image.shape
     	output = image.copy()
     	image = preprocess_image(image)
     	(image, scale) = resize_image(image)
