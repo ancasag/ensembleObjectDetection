@@ -102,7 +102,7 @@ def mainDataset(dataset,output, confidence, weights, fichClass):
       image, scale = resize_image(image)
       boxes, scores, labels = model.predict_on_batch(np.expand_dims(image, axis=0))
       boxes /= scale
-      w, h, d = image.shape
+      h, w, d = image.shape
       boxes1 = []
       for (box, score, label) in zip(boxes[0], scores[0], labels[0]):
         if score < confidence:
