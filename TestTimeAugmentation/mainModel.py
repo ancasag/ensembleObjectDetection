@@ -56,7 +56,7 @@ if __name__== "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("-d", "--dataset", required=True, help="path to the dataset of images")
     ap.add_argument("-o", "--option",  default='consensus', help="option to the ensemble: affirmative, consensus or unanimous")
-    notebook == False
+    notebook = False
     args = vars(ap.parse_args())
     pathImg= args["dataset"]
 
