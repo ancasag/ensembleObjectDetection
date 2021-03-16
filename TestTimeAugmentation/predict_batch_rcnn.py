@@ -104,7 +104,7 @@ def generateXML(filename,outputPath,w,h,d,boxes):
 
 # loop over the input image paths
 
-def mainDataset(dataset,output, confidence,weights,fichClass):
+def mainDataset(dataset,output,weights,fichClass,confidence):
     LABELS = open(fichClass).read().strip().split("\n")
     classes =[L.split(",")[0] for L in LABELS]
     conf= TestConfig()
@@ -113,36 +113,36 @@ def mainDataset(dataset,output, confidence,weights,fichClass):
     
     rcnn = MaskRCNN(mode='inference', model_dir='./', config=conf)
     rcnn.load_weights(weights, by_name=True)#, exclude=[ "mrcnn_class_logits", "mrcnn_bbox_fc", "mrcnn_bbox", "mrcnn_mask"])
-    imagePaths = list(paths.list_images(dataset))
+    imagePaths = list(os.scandir(dataset))
     for (i, imagePath) in enumerate(imagePaths):
-	    # load the input image (in BGR order), clone it, and preprocess it
-	    #print("[INFO] predicting on image {} of {}".format(i + 1,
-	    #	len(imagePaths)))
+        # load the input image (in BGR order), clone it, and preprocess it
+        #print("[INFO] predicting on image {} of {}".format(i + 1,
+        #	len(imagePaths)))
 
-	    # load the input image (in BGR order), clone it, and preprocess it
-	    img = load_img(imagePath)
-	    img = img_to_array(img)
-	    (hI, wI, d) = img.shape
-	
+        # load the input image (in BGR order), clone it, and preprocess it
+        img = load_img(dataset+"/"+imagePath.name)
+        img = img_to_array(img)
+        (hI, wI, d) = img.shape
 
-	    # detect objects in the input image and correct for the image scale
+
+        # detect objects in the input image and correct for the image scale
         # Poner short=512
-	    results = rcnn.detect([img], verbose=0)
-	    r = results[0]
-	    boxes1 = []
-	    for (box, score,cid) in zip(r['rois'], r['scores'],r['class_ids']):
-		    if score < confidence:
-			    continue
+        results = rcnn.detect([img], verbose=0)
+        r = results[0]
+        boxes1 = []
+        for (box, score,cid) in zip(r['rois'], r['scores'],r['class_ids']):
+            if score < confidence:
+                continue
                 # Añadir label que sera con net.classes[cid]
-		    boxes1.append(([classes[cid-1],box],score))
+            boxes1.append(([classes[cid-1],box],score))
 
-	    # parse the filename from the input image path, construct the
-	    # path to the output image, and write the image to disk
-	    filename = imagePath.split(os.path.sep)[-1]
-	    #outputPath = os.path.sep.join([args["output"], filename])
-	    file = open(imagePath[0:imagePath.rfind(".")]+".xml", "w")
-	    file.write(generateXML(imagePath[0:imagePath.rfind(".")],imagePath,wI, hI, d, boxes1))
-	    file.close()
-
-	
-	#cv2.imwrite(outputPath, output)
+        # parse the filename from the input image path, construct the
+        # path to the output image, and write the image to disk
+        #filename = imagePath.split(os.path.sep)[-1]
+        #outputPath = os.path.sep.join([args["output"], filename])
+        #file = open(imagePath[0:imagePath.rfind(".")]+".xml", "w")
+        #file.write(generateXML(imagePath[0:imagePath.rfind(".")],imagePath,wI, hI, d, boxes1))
+        ext = os.path.splitext(imagePath)
+        file = open(ext[0] + ".xml", "w")
+        file.write(generateXML(ext[0], imagePath.name, hI, wI, d, boxes1))
+        file.close()

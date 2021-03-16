@@ -19,7 +19,7 @@ import os
 # file, and if so, presume keras-retinanet set of images + labels
 #confidence=0.25
 
-def mainDataset(dataset,output,confidence,name,weights,fichClass):
+def mainDataset(dataset,output,name,weights,fichClass,confidence):
     classes=[]
     f = open(fichClass)
     for linea in f:
@@ -27,14 +27,14 @@ def mainDataset(dataset,output,confidence,name,weights,fichClass):
     f.close()
     net = gcv.model_zoo.get_model(name, classes=classes, pretrained_base=False)
     net.load_parameters(weights)
-    imagePaths = list(paths.list_images(dataset))
+    imagePaths = list(os.scandir(dataset))
     # loop over the input image paths
     for (i, imagePath) in enumerate(imagePaths):
         # load the input image (in BGR order), clone it, and preprocess it
-        image = cv2.imread(imagePath)
+        image = cv2.imread(dataset+'/'+imagePath.name)
         (hI, wI, d) = image.shape
         # detect objects in the input image and correct for the image scale
-        x, image = gcv.data.transforms.presets.ssd.load_test(imagePath,min(wI,hI))
+        x, image = gcv.data.transforms.presets.ssd.load_test(dataset+'/'+imagePath.name,min(wI,hI))
         cid, score, bbox = net(x)
         boxes1 = []
         for (box, score, cid) in zip(bbox[0], score[0], cid[0]):
@@ -44,9 +44,10 @@ def mainDataset(dataset,output,confidence,name,weights,fichClass):
     
         # parse the filename from the input image path, construct the
         # path to the output image, and write the image to disk
-        filename = imagePath.split(os.path.sep)[-1]
-        file = open(imagePath[0:imagePath.rfind(".")]+".xml", "w")
-        file.write(generateXML(imagePath[0:imagePath.rfind(".")],imagePath,wI, hI, d, boxes1))
+        #filename = imagePath.name.split(os.path.sep)[-1]
+        ext = os.path.splitext(imagePath)
+        file = open(ext[0] + ".xml", "w")
+        file.write(generateXML(ext[0], imagePath.name, hI, wI, d, boxes1))
         file.close()
 
 def prettify(elem):

@@ -15,7 +15,7 @@ def tta(model,myTechniques,pathImg,option, conf):
     for fich in fichs:
         shutil.copy(pathImg+'/'+fich, pathImg+'/tmp')
     imgFolder = pathImg
-
+    print("hola")
     os.mkdir(pathImg+'/../salida')
     # 3. Classification
     for technique in myTechniques:

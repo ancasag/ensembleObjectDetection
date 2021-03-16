@@ -83,7 +83,7 @@ def generateXML(filename,outputPath,w,h,d,boxes,classes):
         childYmax.text = str(ymax)
     return prettify(top)
 
-def mainDataset(dataset,output, confidence,weights,fichClass,backbone='resnet50'):
+def mainDataset(dataset,output,weights,fichClass,confidence,backbone='resnet50'):
     f = open(fichClass)
     LABELS = f.read().strip().split("\n")
     LABELS = [label.split(',')[0] for label in LABELS]
@@ -94,10 +94,10 @@ def mainDataset(dataset,output, confidence,weights,fichClass,backbone='resnet50'
     model.load_weights(weights, by_name=True)
 
 
-    imagePaths = list(paths.list_images(dataset))
+    imagePaths = list(os.scandir(dataset))
     # loop over the input image paths
     for (i, image_path) in enumerate(imagePaths):
-      image = read_image_bgr(image_path)
+      image = read_image_bgr(dataset+'/'+imagePath.name)
       image = preprocess_image(image)
       image, scale = resize_image(image)
       boxes, scores, labels = model.predict_on_batch(np.expand_dims(image, axis=0))
@@ -108,6 +108,7 @@ def mainDataset(dataset,output, confidence,weights,fichClass,backbone='resnet50'
         if score < confidence:
           continue
         boxes1.append(([label,box],score))
-      file = open(image_path[0:image_path.rfind(".")]+".xml", "w")
-      file.write(generateXML(image_path[0:image_path.rfind(".")],image_path,h, w, d, boxes1,LABELS))
+      ext = os.path.splitext(imagePath)
+      file = open(ext[0] + ".xml", "w")
+      file.write(generateXML(ext[0], imagePath.name, hI, wI, d, boxes1))
       file.close()

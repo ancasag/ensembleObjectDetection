@@ -62,7 +62,7 @@ def generateXML(filename,outputPath,w,h,d,boxes,scores,labels,classes):
     return prettify(top)
 
 
-def mainDataset(dataset, output, confidence,weights, fichClass, phi=0):
+def mainDataset(dataset, output,weights, fichClass,confidence,phi=0):
     f = open(fichClass)
     LABELS = f.read().strip().split("\n")
     LABELS = {int(L.split(",")[1]): L.split(",")[0] for L in LABELS}
@@ -81,10 +81,10 @@ def mainDataset(dataset, output, confidence,weights, fichClass, phi=0):
                                            score_threshold=score_threshold)
     prediction_model.load_weights(model_path, by_name=True)
 
-    imagePaths = list(paths.list_images(dataset))
+    imagePaths = list(os.scandir(dataset))
     # loop over the input image paths
     for (i, imagePath) in enumerate(imagePaths):
-        image = cv2.imread(imagePath)
+        image = cv2.imread(dataset+'/'+imagePath.name)
         image = image[:, :, ::-1]
         h, w = image.shape[:2]
 
@@ -108,6 +108,7 @@ def mainDataset(dataset, output, confidence,weights, fichClass, phi=0):
         # parse the filename from the input image path, construct the
         # path to the output image, and write the image to disk
         filename = imagePath.split(os.path.sep)[-1]
-        file = open(imagePath[0:imagePath.rfind(".")] + ".xml", "w")
-        file.write(generateXML(imagePath[0:imagePath.rfind(".")], imagePath, h, w, 3, boxes, scores, labels, LABELS))
+        ext = os.path.splitext(imagePath)
+        file = open(ext[0] + ".xml", "w")
+        file.write(generateXML(ext[0], imagePath.name, hI, wI, d, boxes1))
         file.close()

@@ -135,7 +135,7 @@ def generateXML(filename,outputPath,w,h,d,boxes,confidences, classIds,classes):
 def mainImage(imagePath):
     generateXMLFromImage(imagePath)
 
-def mainDataset(imagesPath, outputDataset, conf, pathPesos, fichNames, fichCfg):
+def mainDataset(imagesPath, outputDataset, pathPesos, fichNames, fichCfg,conf):
     # Give the configuration and weight files for the model and
     # load the network using them.
     if os.path.exists(outputDataset) == False:
@@ -152,7 +152,8 @@ def mainDataset(imagesPath, outputDataset, conf, pathPesos, fichNames, fichCfg):
     
 
     # Invocamos a la funcion con dichos parametros y mostramos el resultado por pantalla
-    images = list(paths.list_files(imagesPath, validExts=(".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif")))
+    #images = list(paths.list_files(imagesPath, validExts=(".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif")))
+    images = list(os.scandir(imagesPath))
     #for peso in modelWeights:
     net = cv.dnn.readNetFromDarknet(fichCfg, pathPesos)#peso)
     net.setPreferableBackend(cv.dnn.DNN_BACKEND_OPENCV)
@@ -160,7 +161,8 @@ def mainDataset(imagesPath, outputDataset, conf, pathPesos, fichNames, fichCfg):
     #nomPeso = os.path.basename( pathPesos)#peso)
     #nombre = os.path.splitext(nomPeso)[0]
     for image in images:
-        generateXMLFromImage(image, outputDataset, net,classes, conf)#+'/'+nombre, net)
+        if image.name.endswith('.jpg') or image.name.endswith('.jpeg') or image.name.endswith('.png') or image.name.endswith('.bmp') or image.name.endswith('.tiff') or image.name.endswith('.tif'):
+            generateXMLFromImage(imagesPath+'/'+image.name, outputDataset, net,classes, conf)#+'/'+nombre, net)
 
 
 def generateXMLFromImage(imagePath, output, net, classes, conf):

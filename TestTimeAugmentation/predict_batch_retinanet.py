@@ -75,45 +75,46 @@ def generateXML(filename,outputPath,w,h,d,boxes):
 # TODO:
 # Allow option for --input to be a .txt file OR a directory. Check if
 # file, and if so, presume keras-retinanet set of images + labels
-def mainDataset(dataset,output, confidence, name, weights,fichClass):
+def mainDataset(dataset,output, name, weights,fichClass,confidence):
     # load the class label mappings
+
     LABELS = open(fichClass).read().strip().split("\n")
     LABELS = {int(L.split(",")[1]): L.split(",")[0] for L in LABELS}
     
     # load the model from disk and grab all input image paths
     model = models.load_model(weights, backbone_name=name)
-    imagePaths = list(paths.list_images(dataset))
+    imagePaths = list(os.scandir(dataset))
     # loop over the input image paths
     for (i, imagePath) in enumerate(imagePaths):
-    	# load the input image (in BGR order), clone it, and preprocess it
-    	print("[INFO] predicting on image {} of {}".format(i + 1,
-    		len(imagePaths)))
+        # load the input image (in BGR order), clone it, and preprocess it
+        print("[INFO] predicting on image {} of {}".format(i + 1,len(imagePaths)))
+        # load the input image (in BGR order), clone it, and preprocess it
+        image = read_image_bgr(dataset+'/'+imagePath.name)
+        hI, wI, d = image.shape
+        output = image.copy()
+        image = preprocess_image(image)
+        (image, scale) = resize_image(image)
+        image = np.expand_dims(image, axis=0)
     
-    	# load the input image (in BGR order), clone it, and preprocess it
-    	image = read_image_bgr(imagePath)
-    	hI, wI, d = image.shape
-    	output = image.copy()
-    	image = preprocess_image(image)
-    	(image, scale) = resize_image(image)
-    	image = np.expand_dims(image, axis=0)
+        # detect objects in the input image and correct for the image scale
+        (boxes, scores, labels) = model.predict_on_batch(image)
+        boxes /= scale
+        boxes1 = []
+        for (box, score, label) in zip(boxes[0], scores[0], labels[0]):
+            if score < float(confidence):
+                continue
+            boxes1.append(([LABELS[label],box],score))
     
-    	# detect objects in the input image and correct for the image scale
-    	(boxes, scores, labels) = model.predict_on_batch(image)
-    	boxes /= scale
-    	boxes1 = []
-    	for (box, score, label) in zip(boxes[0], scores[0], labels[0]):
-    		if score < confidence:
-    			continue
-    		boxes1.append(([LABELS[label],box],score))
+        # parse the filename from the input image path, construct the
+        # path to the output image, and write the image to disk
+        filename = imagePath.name.split(os.path.sep)[-1]
+        #outputPath = os.path.sep.join([args["output"], filename])
+        ext = os.path.splitext(imagePath)
+        #file = open(imagePath[0:imagePath.name.rfind(".")]+".xml", "w")
+        file = open(ext[0]+".xml","w")
+        #file.write(generateXML(imagePath[0:imagePath.name.rfind(".")],imagePath,hI, wI, d, boxes1))
+        file.write(generateXML(ext[0], imagePath.name, hI, wI, d, boxes1))
+        file.close()
     
-    	# parse the filename from the input image path, construct the
-    	# path to the output image, and write the image to disk
-    	filename = imagePath.split(os.path.sep)[-1]
-    	#outputPath = os.path.sep.join([args["output"], filename])
-    	
-    	file = open(imagePath[0:imagePath.rfind(".")]+".xml", "w")
-    	file.write(generateXML(imagePath[0:imagePath.rfind(".")],imagePath,hI, wI, d, boxes1))
-    	file.close()
-    
-    	
-    	#cv2.imwrite(outputPath, output)
+
+        #cv2.imwrite(outputPath, output)
