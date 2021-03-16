@@ -5,7 +5,7 @@ import shutil
 import argparse
 import ensembleOptions
 from imutils import paths
-
+notebook = False
 def models(listaModels,pathImg,option):
     # 1. First we create the folder where we will store the resulting images and create as many folders as we have models
 
@@ -56,7 +56,7 @@ if __name__== "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("-d", "--dataset", required=True, help="path to the dataset of images")
     ap.add_argument("-o", "--option",  default='consensus', help="option to the ensemble: affirmative, consensus or unanimous")
-    notebook = False
+
     args = vars(ap.parse_args())
     pathImg= args["dataset"]
 
