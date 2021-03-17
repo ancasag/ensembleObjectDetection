@@ -60,11 +60,11 @@ def tta(model,myTechniques,pathImg,option):
             os.remove(file)
 
     ensembleOptions.ensembleOptions(pathImg+'/../salida/', option)
+    for xml in os.scandir(pathImg + '/../salida/output/'):
+        shutil.copy(pathImg + '/../salida/output/' + xml.name, pathImg + '/')
     if notebook is False:
-        for xml in os.scandir(pathImg + '/../salida/output/'):
-            shutil.copy(pathImg+'/../salida/output/'+xml.name,pathImg+'/')
-        shutil.rmtree(pathImg+'/tmp')
         shutil.rmtree(pathImg+'/../salida/')
+    shutil.rmtree(pathImg + '/tmp')
 
 if __name__== "__main__":
     #Enter the path of the folder that will contain the images

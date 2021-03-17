@@ -45,9 +45,9 @@ def models(listaModels,pathImg,option):
                 os.remove(file)
 
     ensembleOptions.ensembleOptions(pathImg+'/../salida/', option)
+    for xml in os.scandir(pathImg + '/../salida/output/'):
+        shutil.copy(pathImg + '/../salida/output/' + xml.name, pathImg + '/')
     if notebook is False:
-        for xml in os.scandir(pathImg+'/../salida/output/'):
-            shutil.copy(pathImg+'/../salida/output/'+xml.name,pathImg+'/')
         shutil.rmtree(pathImg+'/../salida/')
 
 
