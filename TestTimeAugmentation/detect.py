@@ -179,7 +179,7 @@ def generateXMLFromImage(imagePath, output, net, classes, conf):
 
     # Remove the bounding boxes with low confidence
     boxes,confidences, classIds = postprocess(frame, outs, conf)
-    wI, hI, d = frame.shape
+    hI, wI, d = frame.shape
     filename = os.path.basename(imagePath)
     file = open(output+'/'+os.path.splitext(filename)[0] + ".xml", "w")
     file.write(generateXML(imagePath[0:imagePath.rfind(".")], "", wI, hI, d, boxes,confidences,classIds,classes))
