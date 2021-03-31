@@ -4,7 +4,7 @@ gluoncv==0.5.0
 imutils==0.5.3
 keras==2.3.1
 keras_retinanet==0.5.1
-lxml==4.4.2
+lxml==4.6.3
 mrcnn==0.2
 mxnet==1.5.1.post0
 numpy==1.17.4
