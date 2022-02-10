@@ -11,5 +11,5 @@ numpy==1.17.4
 opencv-python==3.4.2.16
 pandas==0.24.1
 scikit-image==0.16.2
-tensorflow==1.15.2
+tensorflow==2.5.3
 tqdm==4.40.2
