@@ -7,7 +7,7 @@ keras_retinanet==0.5.1
 lxml==4.4.2
 mrcnn==0.2
 mxnet==1.5.1.post0
-numpy==1.17.4
+numpy==1.22.0
 opencv-python==3.4.2.16
 pandas==0.24.1
 scikit-image==0.16.2
