@@ -9,15 +9,15 @@ notebook = True
 def models(listaModels,pathImg,option):
     # 1. First we create the folder where we will store the resulting images and create as many folders as we have models
 
-    os.mkdir(pathImg+'/../salida')
+    os.mkdir(pathImg+'/salida')
     for model in listaModels:
-        os.mkdir(pathImg+'/../salida/'+os.path.splitext(os.path.basename(model.pathPesos))[0])
+        os.mkdir(pathImg+'/salida/'+os.path.splitext(os.path.basename(model.pathPesos))[0])
 
     # 2. We create a list with the folders we have created
     listDirOut = []
-    for filename in os.listdir(pathImg+'/../salida'):
-        if os.path.isdir(pathImg+'/../salida/'+filename) == True:
-            listDirOut.append(pathImg+'/../salida/'+filename)
+    for filename in os.listdir(pathImg+'/salida'):
+        if os.path.isdir(pathImg+'/salida/'+filename) == True:
+            listDirOut.append(pathImg+'/salida/'+filename)
 
 
     # 3. we copy the images from the initial folder to each of the created folders
@@ -29,26 +29,26 @@ def models(listaModels,pathImg,option):
     # 4. Generate xml
     for model in listaModels:
         #If the model matches the name of the folder, we will predict it is only folder
-        for dir in os.listdir(pathImg+'/../salida/'):
-            if (os.path.splitext(os.path.basename(pathImg+'/../salida/'+model.pathPesos))[0]) == dir:
+        for dir in os.listdir(pathImg+'/salida/'):
+            if (os.path.splitext(os.path.basename(pathImg+'/salida/'+model.pathPesos))[0]) == dir:
                 #Then we list the files in that folder
-                images = os.listdir(pathImg+'/../salida/'+dir)
-                model.predict(pathImg+'/../salida/'+dir, pathImg+'/../salida/'+dir)#,confidence)
+                images = os.listdir(pathImg+'/salida/'+dir)
+                model.predict(pathImg+'/salida/'+dir, pathImg+'/salida/'+dir)#,confidence)
 
 
 
     # 5. We perform the ensemble method
-    for dirOut in os.listdir(pathImg+'/../salida/'):
-        #for file in list(paths.list_files(pathImg+'/../salida/'+dirOut, validExts=(".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif"))):
-        for file in list(os.scandir(pathImg+'/../salida/'+dirOut)):
+    for dirOut in os.listdir(pathImg+'/salida/'):
+        #for file in list(paths.list_files(pathImg+'/salida/'+dirOut, validExts=(".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif"))):
+        for file in list(os.scandir(pathImg+'/salida/'+dirOut)):
             if file.name.endswith('.jpg') or file.name.endswith('.jpeg') or file.name.endswith('.png') or file.name.endswith('.tif') or file.name.endswith('.tiff') or file.name.endswith('.bmp'):
                 os.remove(file)
 
-    ensembleOptions.ensembleOptions(pathImg+'/../salida/', option)
-    for xml in os.scandir(pathImg + '/../salida/output/'):
-        shutil.copy(pathImg + '/../salida/output/' + xml.name, pathImg + '/')
+    ensembleOptions.ensembleOptions(pathImg+'/salida/', option)
+    for xml in os.scandir(pathImg + '/salida/output/'):
+        shutil.copy(pathImg + '/salida/output/' + xml.name, pathImg + '/')
     if notebook is False:
-        shutil.rmtree(pathImg+'/../salida/')
+        shutil.rmtree(pathImg+'/salida/')
 
 
 if __name__== "__main__":
