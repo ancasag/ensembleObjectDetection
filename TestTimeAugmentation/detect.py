@@ -23,7 +23,8 @@ def getOutputsNames(net):
     # Get the names of all the layers in the network
     layersNames = net.getLayerNames()
     # Get the names of the output layers, i.e. the layers with unconnected outputs
-    return [layersNames[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+#     return [layersNames[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+    return [layersNames[i - 1] for i in net.getUnconnectedOutLayers()]
 
 
 
